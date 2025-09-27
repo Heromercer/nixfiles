@@ -8,6 +8,7 @@
     ../../nixos/fonts.nix
     ../../nixos/users.nix
     ../../nixos/audio.nix
+    ../../nixos/nvf.nix
 
     ./hardware-configuration.nix
     ./variables.nix
@@ -19,6 +20,8 @@
   networking.hostName = config.var.hostname;
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
+
+  nixpkgs.config.allowUnfree = true;
 
   time.timeZone = "America/New_York";
 

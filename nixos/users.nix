@@ -3,9 +3,9 @@
   pkgs,
   ...
 }: {
-  programs.zsh.enable = true;
+  programs.fish.enable = true;
   users = {
-    defaultUserShell = pkgs.zsh;
+    defaultUserShell = pkgs.fish;
 
     users.alec = {
       isNormalUser = true;
