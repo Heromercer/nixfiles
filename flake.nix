@@ -8,16 +8,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = inputs@{ nixpkgs, ... }: {
-    nixosConfigurations = { 
+  outputs = inputs @ {nixpkgs, ...}: {
+    nixosConfigurations = {
       The-Bunker = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-	  {
-            _module.args = { inherit inputs; };
-	  }
+          {
+            _module.args = {inherit inputs;};
+          }
           ./hosts/desktop/configuration.nix
-	  inputs.nvf.nixosModules.default
           inputs.home-manager.nixosModules.home-manager
           {
             home-manager = {
@@ -25,8 +24,9 @@
               useUserPackages = true;
               users.alec = import ./hosts/desktop/home.nix;
               backupFileExtension = "backup";
+              extraSpecialArgs = {inherit inputs;};
             };
-           }
+          }
         ];
       };
     };

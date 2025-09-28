@@ -2,8 +2,13 @@
   pkgs,
   config,
   lib,
+  inputs,
   ...
 }: {
+  imports = [
+    inputs.nvf.homeManagerModules.default
+  ];
+
   programs.nvf = {
     enable = true;
     settings = {
@@ -12,6 +17,8 @@
         name = "catppuccin";
         style = "mocha";
       };
+
+      vim.treesitter.enable = true;
 
       vim.lsp = {
         enable = true;

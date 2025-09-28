@@ -8,7 +8,6 @@
     ../../nixos/fonts.nix
     ../../nixos/users.nix
     ../../nixos/audio.nix
-    ../../nixos/nvf.nix
 
     ./hardware-configuration.nix
     ./variables.nix
