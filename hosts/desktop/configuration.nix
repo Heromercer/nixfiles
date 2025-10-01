@@ -8,6 +8,7 @@
     ../../nixos/fonts.nix
     ../../nixos/users.nix
     ../../nixos/audio.nix
+    ../../nixos/hyprland.nix
 
     ./hardware-configuration.nix
     ./variables.nix
@@ -21,8 +22,6 @@
   networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   nixpkgs.config.allowUnfree = true;
-
-  time.timeZone = "America/New_York";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";

@@ -2,18 +2,16 @@
   config,
   pkgs,
   ...
-}: {
+}: let
+  username = config.var.username;
+in {
   programs.fish.enable = true;
   users = {
     defaultUserShell = pkgs.fish;
 
-    users.alec = {
+    users.${username} = {
       isNormalUser = true;
-      extraGroups = ["wheel"];
-      packages = with pkgs; [
-        tree
-      ];
+      extraGroups = ["networkmanager" "wheel"];
     };
   };
 }
-

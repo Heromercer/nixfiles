@@ -27,6 +27,8 @@
 
       vim.languages = {
         nix.enable = true;
+        markdown.enable = true;
+        python.enable = true;
         nix.format.enable = true;
       };
 

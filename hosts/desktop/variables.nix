@@ -1,8 +1,17 @@
-{ config, lib, ... }: {
-
+{
+  config,
+  lib,
+  ...
+}: {
   config.var = {
     hostname = "The-Bunker";
     username = "alec";
+
+    location = "Boston";
+    timeZone = "America/New_York";
+
+    autoUpgrade = false;
+    autoGarbageCollector = true;
   };
 
   options = {
