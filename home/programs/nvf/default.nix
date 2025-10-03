@@ -32,6 +32,14 @@
         nix.format.enable = true;
       };
 
+      vim.assistant = {
+        codecompanion-nvim.enable = true;
+      };
+
+      vim.ui = {
+        noice.enable = true;
+      };
+
       vim.statusline.lualine.enable = true;
       vim.autocomplete.nvim-cmp.enable = true;
     };

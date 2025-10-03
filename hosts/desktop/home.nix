@@ -9,6 +9,7 @@
     ../../home/programs/kitty
     ../../home/programs/shell
     ../../home/programs/nvf
+    ../../home/programs/discord
   ];
 
   home.username = "alec";
