@@ -11,7 +11,7 @@
     neovim
     disko
     git
-    cfdisk
+    util-linux
   ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];

@@ -2,9 +2,19 @@
   description = "Flake for my machines";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-25.05";
-    nvf.url = "github:notashelf/nvf";
-    hyprland.url = "github:hyprwm/Hyprland";
-    nixcord.url = "github:kaylorben/nixcord";
+
+    nvf = {
+      url = "github:notashelf/nvf";
+    };
+
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+    };
+
+    nixcord = {
+      url = "github:kaylorben/nixcord";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
