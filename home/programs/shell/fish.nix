@@ -8,7 +8,7 @@
     enable = true;
 
     shellAliases = {
-      rebuild = "sudo nixos-rebuild switch --flake ~/.nixfiles#The-Bunker";
+      rebuild = "sudo nixos-rebuild switch --flake ~/.nixfiles#${config.hostname}";
     };
   };
 }

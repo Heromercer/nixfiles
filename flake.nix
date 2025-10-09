@@ -22,19 +22,19 @@
   };
   outputs = inputs @ {nixpkgs, ...}: {
     nixosConfigurations = {
-      The-Bunker = nixpkgs.lib.nixosSystem {
+      majula = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           {
             _module.args = {inherit inputs;};
           }
-          ./hosts/desktop/configuration.nix
+          ./hosts/majula/configuration.nix
           inputs.home-manager.nixosModules.home-manager
           {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.alec = import ./hosts/desktop/home.nix;
+              users.alec = import ./hosts/majula/home.nix;
               backupFileExtension = "backup";
               extraSpecialArgs = {inherit inputs;};
             };

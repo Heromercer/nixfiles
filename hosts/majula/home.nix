@@ -10,6 +10,8 @@
     ../../home/programs/shell
     ../../home/programs/nvf
     ../../home/programs/discord
+
+    ../../home/system/hyprland
   ];
 
   home.username = "alec";

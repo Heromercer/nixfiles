@@ -4,7 +4,7 @@
   ...
 }: {
   config.var = {
-    hostname = "The-Bunker";
+    hostname = "majula";
     username = "alec";
 
     location = "Boston";
