@@ -9,6 +9,7 @@
     ./autostart.nix
     ./binds.nix
     ./monitors.nix
+    ./windowRules.nix
   ];
 
   home.packages = with pkgs; [
@@ -37,5 +38,12 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
+
+    settings = {
+      env = [
+        "XCURSOR_SIZE,24"
+        "HYPRCURSOR_SIZE,24"
+      ];
+    };
   };
 }
