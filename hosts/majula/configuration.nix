@@ -7,6 +7,7 @@
   imports = [
     ../../nixos/fonts.nix
     ../../nixos/users.nix
+    ../../nixos/utils.nix
     ../../nixos/audio.nix
     ../../nixos/hyprland.nix
 
@@ -18,7 +19,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = config.var.hostname;
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  #  networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   nixpkgs.config.allowUnfree = true;
@@ -28,9 +29,8 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  services.xserver.enable = false;
   services.displayManager.ly.enable = true;
-  programs.hyprland.enable = true;
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";

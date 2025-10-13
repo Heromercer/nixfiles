@@ -12,6 +12,7 @@ in {
     users.${username} = {
       isNormalUser = true;
       extraGroups = ["networkmanager" "wheel"];
+      hashedPassword = config.var.password;
     };
   };
 }

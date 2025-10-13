@@ -12,6 +12,10 @@
     ../../home/programs/discord
 
     ../../home/system/hyprland
+
+    ./variables.nix
+
+    ./secrets
   ];
 
   home.username = "alec";
