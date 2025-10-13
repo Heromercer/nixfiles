@@ -18,10 +18,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = config.var.hostname;
-  #  networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
-
   nixpkgs.config.allowUnfree = true;
 
   # Configure network proxy if necessary
