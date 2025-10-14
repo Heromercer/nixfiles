@@ -12,6 +12,7 @@
     ../../home/programs/discord
 
     ../../home/system/hyprland
+    ../../home/system/vicinae
 
     ./variables.nix
 
