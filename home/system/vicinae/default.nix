@@ -3,8 +3,8 @@
 
   services.vicinae = {
     enable = true;
-    autStart = true;
+    autoStart = true;
   };
 
-  wayland.windowManger.hyprland.settings.exec-once = ["systemctl enable --now --user viciae.service"];
+  wayland.windowManager.hyprland.settings.exec-once = ["systemctl enable --now --user vicinae.service"];
 }
