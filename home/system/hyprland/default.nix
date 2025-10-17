@@ -33,6 +33,7 @@
     glib
     direnv
     meson
+    wofi
   ];
 
   wayland.windowManager.hyprland = {

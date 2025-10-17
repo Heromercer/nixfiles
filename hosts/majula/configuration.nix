@@ -9,7 +9,8 @@
     ../../nixos/users.nix
     ../../nixos/utils.nix
     ../../nixos/audio.nix
-    ../../nixos/hyprland.nix
+    #    ../../nixos/hyprland.nix
+    ../../nixos/niri.nix
 
     ./hardware-configuration.nix
     ./variables.nix
@@ -41,6 +42,8 @@
     vim
     wget
     neovim
+    fuzzel
+    alacritty
     git
     kitty
     fastfetch
