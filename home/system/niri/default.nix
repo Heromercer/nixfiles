@@ -1,9 +1,8 @@
 {
   pkgs,
+  config,
   inputs,
   ...
 }: {
-  imports = [
-    inputs.niri.homeModules.config
-  ];
+  xdg.configFile."niri/config.kdl".source = ./config.kdl;
 }
