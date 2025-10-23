@@ -20,6 +20,8 @@
     ./secrets
   ];
 
+  home.enableNixpkgsReleaseCheck = false;
+
   home.username = "alec";
   home.homeDirectory = "/home/alec";
   home.stateVersion = "25.05";
