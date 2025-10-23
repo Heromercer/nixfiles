@@ -367,6 +367,10 @@ binds {
     Mod+D hotkey-overlay-title="Application Launcher" { 
       spawn "dms" "ipc" "call" "spotlight" "toggle";
     }
+    
+    Mod+Ctrl+Delete hotkey-overlay-title="Power Menu" {
+      spawn "dms" "ipc" "call" "powermenu" "toggle";
+   }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
