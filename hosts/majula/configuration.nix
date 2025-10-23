@@ -10,6 +10,7 @@
     ../../nixos/hyprland.nix
     ../../nixos/niri.nix
     ../../nixos/nix.nix
+    ../../nixos/tuigreet.nix
     ../../nixos/users.nix
     ../../nixos/utils.nix
 
@@ -26,7 +27,6 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = false;
-  services.displayManager.ly.enable = true;
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";

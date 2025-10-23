@@ -29,5 +29,6 @@
     cava
     cliphist
     btop
+    xwayland-satellite
   ];
 }
