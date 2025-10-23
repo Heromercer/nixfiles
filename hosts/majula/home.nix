@@ -11,9 +11,9 @@
     ../../home/programs/nvf
     ../../home/programs/discord
 
+    ../../home/system/dms
     ../../home/system/hyprland
     ../../home/system/niri
-    #    ../../home/system/vicinae
 
     ./variables.nix
 
@@ -26,6 +26,6 @@
   home.homeDirectory = "/home/alec";
   home.stateVersion = "25.05";
 
-  home.packages = [
+  home.packages = with pkgs; [
   ];
 }

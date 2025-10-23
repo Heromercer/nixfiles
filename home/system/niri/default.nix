@@ -4,5 +4,12 @@
   inputs,
   ...
 }: {
+  imports = [
+    inputs.niri.homeModules.niri
+  ];
   xdg.configFile."niri/config.kdl".source = ./config.kdl;
+
+  home.packages = with pkgs; [
+    wl-clipboard
+  ];
 }
