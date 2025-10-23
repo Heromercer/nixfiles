@@ -6,6 +6,7 @@
 }: {
   imports = [
     ../../nixos/audio.nix
+    ../../nixos/bluetooth.nix
     ../../nixos/fonts.nix
     ../../nixos/hyprland.nix
     ../../nixos/niri.nix
