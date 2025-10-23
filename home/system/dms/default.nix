@@ -13,5 +13,8 @@
   programs.dankMaterialShell = {
     enable = true;
     quickshell.package = pkgs-unstable.quickshell;
+    plugins = {
+      PowerUsage.src = "${inputs.dankMaterialShell}/PLUGINS/PowerUsage";
+    };
   };
 }

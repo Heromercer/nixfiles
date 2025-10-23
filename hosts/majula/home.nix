@@ -15,6 +15,8 @@
     ../../home/system/hyprland
     ../../home/system/niri
 
+    ../../home/pkgs
+
     ./variables.nix
 
     ./secrets

@@ -28,5 +28,6 @@
     matugen
     cava
     cliphist
+    btop
   ];
 }

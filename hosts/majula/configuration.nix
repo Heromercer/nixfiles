@@ -5,12 +5,13 @@
   ...
 }: {
   imports = [
-    ../../nixos/fonts.nix
-    ../../nixos/users.nix
-    ../../nixos/utils.nix
     ../../nixos/audio.nix
+    ../../nixos/fonts.nix
     ../../nixos/hyprland.nix
     ../../nixos/niri.nix
+    ../../nixos/nix.nix
+    ../../nixos/users.nix
+    ../../nixos/utils.nix
 
     ./hardware-configuration.nix
     ./variables.nix
@@ -18,8 +19,6 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  nixpkgs.config.allowUnfree = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -48,8 +47,6 @@
     kitty
     fastfetch
   ];
-
-  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
