@@ -30,5 +30,6 @@
     cliphist
     btop
     xwayland-satellite
+    nitch
   ];
 }
