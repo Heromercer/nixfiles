@@ -5,11 +5,12 @@
   ...
 }: {
   imports = [
+    ../../home/programs/discord
+    ../../home/programs/fastfetch
     ../../home/programs/git
     ../../home/programs/kitty
-    ../../home/programs/shell
     ../../home/programs/nvf
-    ../../home/programs/discord
+    ../../home/programs/shell
 
     ../../home/system/dms
     ../../home/system/hyprland
