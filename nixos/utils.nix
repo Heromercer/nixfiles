@@ -21,6 +21,20 @@ in {
     openssh = {
       enable = true;
     };
+
+    gnome.gnome-keyring = {
+      enable = true;
+    };
+  };
+
+  security.polkit.enable = true;
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-gnome
+    ];
   };
 
   environment.systemPackages = with pkgs; [
@@ -30,5 +44,7 @@ in {
     alacritty
     git
     kitty
+    polkit
+    gparted
   ];
 }

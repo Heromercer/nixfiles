@@ -18,6 +18,10 @@
         style = "mocha";
       };
 
+      vim.formatter = {
+        conform-nvim.enable = true;
+      };
+
       vim.treesitter.enable = true;
 
       vim.lsp = {

@@ -24,7 +24,6 @@
     glib
     direnv
     meson
-    wofi
     matugen
     cava
     cliphist
