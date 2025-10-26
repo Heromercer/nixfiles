@@ -11,6 +11,7 @@
     ../../home/programs/kitty
     ../../home/programs/nvf
     ../../home/programs/shell
+    ../../home/programs/yazi
 
     ../../home/system/dms
     ../../home/system/hyprland
