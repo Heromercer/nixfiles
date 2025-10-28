@@ -69,6 +69,12 @@ input {
     // focus-follows-mouse max-scroll-amount="0%"
 }
 
+gestures {
+    hot-corners {
+        off
+    }
+}
+
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
 // The built-in laptop monitor is usually called "eDP-1".
@@ -125,9 +131,16 @@ output "DP-3" {
     transform "normal"
 }
 
-cursor {
-    xcursor-theme "catppuccin-latte-light-cursors"
-    xcursor-size 24
+environment {
+  XDG_CURRENT_DESKTOP "niri"
+  MOZ_ENABLE_WAYLAND "1"
+  QT_QPA_PLATFORM "wayland"
+  ELECTRON_OZONE_PLATFORM_HINT "wayland"
+  QT_QPA_PLATFORMTHEME "gtk3"
+  QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+  TERMINAL "alacritty"
+  cursor-theme "catppuccin-latte-light-cursors"
+  xcursor-size "24"
 }
 
 
