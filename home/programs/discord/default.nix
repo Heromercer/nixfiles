@@ -1,4 +1,8 @@
-{inputs, ...}: {
+{
+  inputs,
+  pkgs-unstable,
+  ...
+}: {
   imports = [
     inputs.nixcord.homeModules.nixcord
     ./themes/tokyoNight.nix
@@ -8,11 +12,13 @@
     discord = {
       enable = false;
     };
-    vesktop.enable = true;
+    vesktop = {
+      enable = true;
+    };
     config = {
       frameless = true;
       autoUpdate = true;
-      enabledThemes = ["tokyoNight"];
+      enabledThemes = ["tokyo-night.css"];
     };
   };
 }
