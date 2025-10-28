@@ -63,6 +63,16 @@
           inputs.home-manager.nixosModules.home-manager
         ];
       };
+      theBunker = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          {
+            _module.args = {inherit inputs;};
+          }
+          ./hosts/theBunker/configuration.nix
+          inputs.home-manager.nixosModules.home-manager
+        ];
+      };
       installerIso = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
