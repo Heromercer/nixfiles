@@ -7,7 +7,9 @@
   imports = [
     ../../nixos/audio.nix
     ../../nixos/bluetooth.nix
+    ../../nixos/drives.nix
     ../../nixos/fonts.nix
+    ../../nixos/gaming.nix
     ../../nixos/home-manager.nix
     ../../nixos/hyprland.nix
     ../../nixos/niri.nix

@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
     ani-cli
     caligula
+    catppuccin-cursors.latteLight
     qt5.qtwayland
     qt6.qtwayland
     libsForQt5.qt5ct
@@ -32,5 +33,6 @@
     btop
     xwayland-satellite
     nitch
+    ntfs3g
   ];
 }

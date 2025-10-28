@@ -106,6 +106,31 @@ input {
     position x=1280 y=0
 }
 
+
+output "eDP-1" {
+    mode "1920x1080@120.030"
+    scale 2
+    transform "normal"
+}
+
+output "DP-1" {
+    mode "2560x1440@144.006"
+    scale 1
+    transform "normal"
+}
+
+output "DP-3" {
+    mode "2560x1440@144.006"
+    scale 1
+    transform "normal"
+}
+
+cursor {
+    xcursor-theme "catppuccin-latte-light-cursors"
+    xcursor-size 24
+}
+
+
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Layout
