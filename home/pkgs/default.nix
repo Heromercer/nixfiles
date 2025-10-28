@@ -4,6 +4,8 @@
   ...
 }: {
   home.packages = with pkgs; [
+    ani-cli
+    caligula
     qt5.qtwayland
     qt6.qtwayland
     libsForQt5.qt5ct
