@@ -65,21 +65,6 @@
           }
           ./hosts/majula/configuration.nix
           inputs.home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.alec = import ./hosts/majula/home.nix;
-              backupFileExtension = "backup";
-              extraSpecialArgs = {
-                inherit inputs;
-                pkgs-unstable = import nixpkgs-unstable {
-                  system = "x86_64-linux";
-                  config.allowUnfree = true;
-                };
-              };
-            };
-          }
         ];
       };
       installerIso = nixpkgs.lib.nixosSystem {

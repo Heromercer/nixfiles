@@ -8,6 +8,7 @@
     ../../nixos/audio.nix
     ../../nixos/bluetooth.nix
     ../../nixos/fonts.nix
+    ../../nixos/home-manager.nix
     ../../nixos/hyprland.nix
     ../../nixos/niri.nix
     ../../nixos/nix.nix
