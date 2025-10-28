@@ -63,13 +63,13 @@
           inputs.home-manager.nixosModules.home-manager
         ];
       };
-      theBunker = nixpkgs.lib.nixosSystem {
+      firelink = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           {
             _module.args = {inherit inputs;};
           }
-          ./hosts/theBunker/configuration.nix
+          ./hosts/firelink/configuration.nix
           inputs.home-manager.nixosModules.home-manager
         ];
       };
