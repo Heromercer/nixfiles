@@ -6,7 +6,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    backupFilExtension = "backup";
+    backupFileExtension = "backup";
     extraSpecialArgs = {
       inherit inputs;
       pkgs-unstable = import nixpkgs-unstable {

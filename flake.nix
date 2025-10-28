@@ -51,11 +51,7 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };
-  outputs = inputs @ {
-    nixpkgs,
-    nixpkgs-unstable,
-    ...
-  }: {
+  outputs = inputs @ {nixpkgs, ...}: {
     nixosConfigurations = {
       majula = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";

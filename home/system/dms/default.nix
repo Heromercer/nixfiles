@@ -1,6 +1,5 @@
 {
   pkgs,
-  pkgs-unstable,
   config,
   inputs,
   ...
@@ -12,7 +11,7 @@
 
   programs.dankMaterialShell = {
     enable = true;
-    quickshell.package = pkgs-unstable.quickshell;
+    quickshell.package = inputs.nixpkgs-unstable.legacyPackages.x86_64-linux.quickshell;
     plugins = {
       PowerUsage.src = "${inputs.dankMaterialShell}/PLUGINS/PowerUsage";
     };
