@@ -18,21 +18,21 @@
         "$mainMod, B, exec, $browser"
         "$mainMod SHIFT, F, fullscreen"
         "$mainMod, SPACE, togglefloating"
-        "$mainMod, N, exec, kitty --hold -e nvim"
+        #"$mainMod, N, exec, kitty --hold -e nvim"
 
-        # Volume and Media Control
-        ", XF86AudioRaiseVolume, exec, pamixer -i 5"
-        ", XF86AudioLowerVolume, exec, pamixer -d 5"
-        ", XF86AudioMicMute, exec, pamixer --default-source -m"
-        ", XF86AudioMute, exec, pamixer -t"
-        ", XF86AudioPlay, exec, playerctl play-pause"
-        ", XF86AudioPause, exec, playerctl play-pause"
-        ", XF86AudioNext, exec, playerctl next"
-        ", XF86AudioPrev, exec, playerctl previous"
-
-        # Screen brightness
-        ", XF86MonBrightnessUp, exec, brightnessctl s +5%"
-        ", XF86MonBrightnessDown, exec, brightnessctl s 5%-"
+        # DMS binds
+        "SUPER, D, exec, dms ipc call spotlight toggle"
+        "SUPER, V, exec, dms ipc call clipboard toggle"
+        "SUPER, M, exec, dms ipc call processlist toggle"
+        "SUPER, N, exec, dms ipc call notifications toggle"
+        "SUPER, comma, exec, dms ipc call settings toggle"
+        "SUPER, P, exec, dms ipc call notepad toggle"
+        "SUPERALT, L, exec, dms ipc call lock lock"
+        "SUPER, X, exec, dms ipc call powermenu toggle"
+        "SUPER, Y, exec, dms ipc call dankdash wallpaper"
+        "SUPER, C, exec, dms ipc call control-center toggle"
+        "SUPER, TAB, exec, dms ipc call hypr toggleOverview"
+        "SUPERSHIFT, N, exec, dms ipc call night toggle"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"
@@ -77,18 +77,18 @@
         "$mainMod, mouse:273, resizewindow"
       ];
 
-      # Bindings with repeat (bindel)
-      bindel = [
-        ",XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
-        ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-        ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-        ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-        ",XF86MonBrightnessUp, exec, brightnessctl s 10%+"
-        ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
-      ];
-
-      # Bindings locked (bindl)
       bindl = [
+        # Audio controls - using DankShell
+        ", XF86AudioRaiseVolume, exec, dms ipc call audio increment 3"
+        ", XF86AudioLowerVolume, exec, dms ipc call audio decrement 3"
+        ", XF86AudioMute, exec, dms ipc call audio mute"
+        ", XF86AudioMicMute, exec, dms ipc call audio micmute"
+
+        # Brightness controls - using DankShell
+        ", XF86MonBrightnessUp, exec, dms ipc call brightness increment 5 \"\""
+        ", XF86MonBrightnessDown, exec, dms ipc call brightness decrement 5 \"\""
+
+        # Media player controls
         ", XF86AudioNext, exec, playerctl next"
         ", XF86AudioPause, exec, playerctl play-pause"
         ", XF86AudioPlay, exec, playerctl play-pause"
