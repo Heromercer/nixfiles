@@ -7,6 +7,7 @@
   imports = [
     ../../home/programs/discord
     ../../home/programs/fastfetch
+    ../../home/programs/firefox
     ../../home/programs/git
     ../../home/programs/kitty
     ../../home/programs/nvf
@@ -14,6 +15,7 @@
     ../../home/programs/yazi
 
     ../../home/system/dms
+    ../../home/system/homeDir
     ../../home/system/hyprland
     ../../home/system/niri
 

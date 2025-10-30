@@ -50,6 +50,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+
+    textfox = {
+      url = "github:adriankarlen/textfox";
+    };
   };
   outputs = inputs @ {nixpkgs, ...}: {
     nixosConfigurations = {

@@ -32,8 +32,6 @@
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
-  programs.firefox.enable = true;
-
   home-manager.users."${config.var.username}" = import ./home.nix;
 
   # Some programs need SUID wrappers, can be configured further or are
