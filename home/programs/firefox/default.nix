@@ -5,19 +5,17 @@
   ...
 }: {
   imports = [inputs.textfox.homeManagerModules.default];
-
   programs.firefox.enable = true;
-
   textfox = {
-    enable = false;
+    enable = true;
     profile = "main";
     config = {
       background = {
-        color = "#123456";
+        color = "#1e1e2e"; # Catppuccin Mocha Base
       };
       border = {
-        color = "#654321";
-        width = "4px";
+        color = "#cba6f7"; # Catppuccin Mocha Mauve
+        width = "2px";
         transition = "1.0s ease";
         radius = "3px";
       };
@@ -27,11 +25,11 @@
       displayUrlbarIcons = true;
       displaySidebarTools = false;
       displayTitles = false;
-      newtabLogo = "   __            __  ____          \A   / /____  _  __/ /_/ __/___  _  __\A  / __/ _ \\| |/_/ __/ /_/ __ \\| |/_/\A / /_/  __/>  </ /_/ __/ /_/ />  <  \A \\__/\\___/_/|_|\\__/_/  \\____/_/|_|  ";
+      newtabLogo = "";
       font = {
         family = "Fira Code";
         size = "15px";
-        accent = "#654321";
+        accent = "#cba6f7"; # Catppuccin Mocha Mauve
       };
       sidebery = {
         margin = "1.0rem";

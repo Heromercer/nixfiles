@@ -44,6 +44,7 @@ in {
     wget
     neovim
     alacritty
+    emacs
     git
     kitty
     polkit

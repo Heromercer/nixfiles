@@ -2,4 +2,9 @@
   config,
   pkgs,
   ...
-}: {xdg.userDirs.createDirectories = true;}
+}: {
+  xdg.userDirs = {
+    createDirectories = true;
+    documents = "${config.home.homeDirectory}/Documents";
+  };
+}

@@ -34,5 +34,6 @@
     xwayland-satellite
     nitch
     ntfs3g
+    xdg-user-dirs
   ];
 }
