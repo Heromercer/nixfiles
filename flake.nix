@@ -54,6 +54,11 @@
     textfox = {
       url = "github:adriankarlen/textfox";
     };
+
+    lazyvim = {
+      url = "github:pfassina/lazyvim-nix";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
   };
   outputs = inputs @ {nixpkgs, ...}: {
     nixosConfigurations = {

@@ -40,14 +40,18 @@ in {
   };
 
   environment.systemPackages = with pkgs; [
-    vim
-    wget
-    neovim
     alacritty
+    clang
+    coreutils
     emacs
+    emacs-all-the-icons-fonts
+    fd
     git
-    kitty
-    polkit
     gparted
+    kitty
+    neovim
+    polkit
+    ripgrep
+    wget
   ];
 }
