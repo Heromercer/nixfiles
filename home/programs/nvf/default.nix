@@ -36,6 +36,8 @@
           };
         };
 
+        git.gitsigns.enable = true;
+
         formatter = {
           conform-nvim.enable = true;
         };
