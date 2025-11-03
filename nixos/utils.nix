@@ -50,8 +50,10 @@ in {
     gparted
     kitty
     neovim
+    nodejs
     polkit
     ripgrep
+    tree-sitter
     wget
   ];
 }

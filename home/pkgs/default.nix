@@ -13,6 +13,7 @@ in {
       catppuccin-cursors.latteLight
       qt5.qtwayland
       qt6.qtwayland
+      lazygit
       libsForQt5.qt5ct
       qt6ct
       hyprshot

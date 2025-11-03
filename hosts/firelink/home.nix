@@ -10,11 +10,9 @@
     ../../home/programs/firefox
     ../../home/programs/git
     ../../home/programs/kitty
-    ../../home/programs/lazyvim
     ../../home/programs/nvf
     ../../home/programs/shell
     ../../home/programs/yazi
-
     ../../home/system/dms
     ../../home/system/homeDir
     ../../home/system/hyprland
