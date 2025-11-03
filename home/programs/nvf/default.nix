@@ -124,44 +124,51 @@
                   }
                   {
                     icon = " ";
-                    padding = 1;
                     key = "f";
                     desc = "Find File";
                     action = ":Telescope find_files";
+                    padding = 1;
                   }
                   {
                     icon = "";
-                    padding = 1;
                     key = "n";
                     desc = "New File";
                     action = ":ene | startinsert";
+                    padding = 1;
                   }
                   {
                     icon = " ";
-                    padding = 1;
                     key = "g";
                     desc = "Find Text";
                     action = ":lua Snacks.dashboard.pick('live_grep')";
+                    padding = 1;
                   }
                   {
                     icon = " ";
-                    padding = 1;
                     key = "r";
                     desc = "Recent Files";
                     action = ":lua Snacks.dashboard.pick('oldfiles')";
+                    padding = 1;
                   }
                   {
                     icon = "󰠮";
-                    padding = 1;
                     key = "i";
                     desc = "Neorg Index";
                     action = ":Neorg index";
+                    padding = 1;
                   }
                   {
                     icon = "󰍃";
                     key = "q";
                     desc = "Quit";
                     action = ":qa";
+                    padding = 2;
+                  }
+                  {
+                    icon = " ";
+                    title = "Projects";
+                    section = "projects";
+                    indent = 2;
                   }
                   {
                     padding = [0 2];
