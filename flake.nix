@@ -69,10 +69,8 @@
       };
       firelink = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = {inherit inputs;};
         modules = [
-          {
-            _module.args = {inherit inputs;};
-          }
           ./hosts/firelink/configuration.nix
           inputs.home-manager.nixosModules.home-manager
         ];

@@ -19,7 +19,6 @@
         transition = "1.0s ease";
         radius = "3px";
       };
-      displayHorizontalTabs = true;
       displayWindowControls = true;
       displayNavButtons = true;
       displayUrlbarIcons = true;
@@ -31,8 +30,13 @@
         size = "15px";
         accent = "#cba6f7"; # Catppuccin Mocha Mauve
       };
-      sidebery = {
-        margin = "1.0rem";
+      tabs = {
+        horizontal = {
+          enable = true;
+        };
+        vertical = {
+          margin = "1.0rem";
+        };
       };
     };
   };
