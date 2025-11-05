@@ -8,7 +8,9 @@
     enable = true;
 
     shellAliases = {
-      rebuild = "sudo nixos-rebuild switch --flake ~/.nixfiles#${config.var.hostname}";
+      nhs = "nh os switch";
+      nhsu = "nh os switch -u";
+      nhh = "nh home switch";
       check = "sudo nix flake check";
       nf = "cd .nixfiles";
     };
