@@ -10,6 +10,7 @@
     ../../home/programs/firefox
     ../../home/programs/git
     ../../home/programs/kitty
+    ../../home/programs/nh
     ../../home/programs/nvf
     ../../home/programs/shell
     ../../home/programs/yazi

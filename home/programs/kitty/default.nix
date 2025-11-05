@@ -14,5 +14,9 @@
       name = "JetBrainsMono Nerd Font";
       size = 12;
     };
+    extraConfig = ''
+      include dank-tabs.conf
+      include dank-theme.conf
+    '';
   };
 }
