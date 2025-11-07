@@ -10,10 +10,13 @@
     ../../home/programs/firefox
     ../../home/programs/git
     ../../home/programs/kitty
+    ../../home/programs/mpd
     ../../home/programs/nh
     ../../home/programs/nvf
+    ../../home/programs/rmpc
     ../../home/programs/shell
     ../../home/programs/yazi
+
     ../../home/system/dms
     ../../home/system/homeDir
     ../../home/system/hyprland

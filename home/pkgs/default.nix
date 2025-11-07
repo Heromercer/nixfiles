@@ -11,6 +11,7 @@ in {
       ani-cli
       caligula
       catppuccin-cursors.latteLight
+      jdk
       qt5.qtwayland
       qt6.qtwayland
       lazygit
@@ -42,6 +43,6 @@ in {
       xdg-user-dirs
     ]
     ++ lib.optionals (hostname == "firelink") [
-      atlauncher
+      prismlauncher
     ];
 }
