@@ -19,8 +19,8 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
-    sops-nix = {
-      url = "github:mic92/sops-nix";
+    agenix = {
+      url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -55,16 +55,16 @@
       url = "github:adriankarlen/textfox";
     };
   };
+
   outputs = inputs @ {nixpkgs, ...}: {
     nixosConfigurations = {
       majula = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = {inherit inputs;};
         modules = [
-          {
-            _module.args = {inherit inputs;};
-          }
           ./hosts/majula/configuration.nix
           inputs.home-manager.nixosModules.home-manager
+          inputs.agenix.nixosModules.default
         ];
       };
       firelink = nixpkgs.lib.nixosSystem {
@@ -73,6 +73,7 @@
         modules = [
           ./hosts/firelink/configuration.nix
           inputs.home-manager.nixosModules.home-manager
+          inputs.agenix.nixosModules.default
         ];
       };
       installerIso = nixpkgs.lib.nixosSystem {

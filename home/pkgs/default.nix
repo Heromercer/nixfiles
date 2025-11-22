@@ -43,6 +43,8 @@ in {
       xdg-user-dirs
     ]
     ++ lib.optionals (hostname == "firelink") [
+      #katawa-shoujo-re-engineered
       prismlauncher
+      shadps4
     ];
 }

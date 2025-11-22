@@ -7,6 +7,10 @@
   programs.fish = {
     enable = true;
 
+    interactiveShellInit = ''
+      set fish_greeting
+    '';
+
     shellAliases = {
       nhs = "nh os switch";
       nhsu = "nh os switch -u";

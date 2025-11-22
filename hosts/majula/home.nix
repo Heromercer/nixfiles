@@ -20,8 +20,6 @@
     ../../home/pkgs
 
     ./variables.nix
-
-    ./secrets
   ];
 
   home.enableNixpkgsReleaseCheck = false;

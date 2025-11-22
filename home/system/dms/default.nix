@@ -12,8 +12,19 @@
   programs.dankMaterialShell = {
     enable = true;
     quickshell.package = inputs.nixpkgs-unstable.legacyPackages.x86_64-linux.quickshell;
-    plugins = {
-      PowerUsage.src = "${inputs.dankMaterialShell}/PLUGINS/PowerUsage";
+    niri = {
+      enableKeybinds = true;
+      enableSpawn = true;
     };
+
+    enableSystemMonitoring = true;
+    enableClipboard = true;
+    enableVPN = true;
+    enableBrightnessControl = true;
+    enableColorPicker = true;
+    enableDynamicTheming = true;
+    enableAudioWavelength = true;
+    enableCalendarEvents = true;
+    enableSystemSound = true;
   };
 }

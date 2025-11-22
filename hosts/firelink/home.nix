@@ -17,6 +17,7 @@
     ../../home/programs/shell
     ../../home/programs/yazi
 
+    ../../home/system/cursor
     ../../home/system/dms
     ../../home/system/homeDir
     ../../home/system/hyprland
@@ -25,8 +26,6 @@
     ../../home/pkgs
 
     ./variables.nix
-
-    ./secrets
   ];
 
   home.enableNixpkgsReleaseCheck = false;
