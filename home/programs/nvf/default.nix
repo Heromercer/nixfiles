@@ -7,6 +7,9 @@
 }: {
   imports = [
     inputs.nvf.homeManagerModules.default
+
+    ./dashboard.nix
+    ./notes.nix
   ];
   programs.nvf = {
     enable = true;
@@ -20,7 +23,17 @@
           nvim-autopairs.enable = true;
         };
 
-        autocomplete.nvim-cmp.enable = true;
+        autocomplete = {
+          nvim-cmp = {
+            enable = true;
+            sources = {
+              nvim_lsp = "[LSP]";
+              path = "[Path]";
+              buffer = "[Buffer]";
+              treesitter = "[Treesitter]";
+            };
+          };
+        };
 
         binds = {
           whichKey.enable = true;
@@ -54,28 +67,6 @@
           formatOnSave = true;
         };
 
-        notes = {
-          neorg = {
-            enable = true;
-            treesitter.enable = true;
-            setupOpts = {
-              load = {
-                "core.defaults".enable = true;
-                "core.concealer".config = {
-                  folds = true;
-                  icon_preset = "basic";
-                };
-                "core.dirman".config = {
-                  workspaces = {
-                    notes = "~/Documents/wiki";
-                  };
-                  default_workspace = "notes";
-                };
-              };
-            };
-          };
-        };
-
         options = {
           signcolumn = "yes";
           termguicolors = true;
@@ -87,7 +78,14 @@
         statusline.lualine.enable = true;
 
         tabline = {
-          nvimBufferline.enable = true;
+          nvimBufferline = {
+            enable = true;
+            mappings = {
+              cycleNext = "<S-l>";
+              cyclePrevious = "<S-h>";
+              closeCurrent = "<leader>bd";
+            };
+          };
         };
 
         telescope = {
@@ -110,76 +108,16 @@
 
         terminal.toggleterm = {
           enable = true;
+          mappings = {
+            open = "<c-/>";
+          };
+          setupOpts = {
+            direction = "float";
+          };
           lazygit.enable = true;
         };
 
         utility = {
-          snacks-nvim = {
-            enable = true;
-
-            setupOpts = {
-              dashboard = {
-                sections = [
-                  {
-                    section = "header";
-                    padding = 3;
-                  }
-                  {
-                    icon = " ";
-                    key = "f";
-                    desc = "Find File";
-                    action = ":Telescope find_files";
-                    padding = 1;
-                  }
-                  {
-                    icon = "";
-                    key = "n";
-                    desc = "New File";
-                    action = ":ene | startinsert";
-                    padding = 1;
-                  }
-                  {
-                    icon = " ";
-                    key = "g";
-                    desc = "Find Text";
-                    action = ":lua Snacks.dashboard.pick('live_grep')";
-                    padding = 1;
-                  }
-                  {
-                    icon = " ";
-                    key = "r";
-                    desc = "Recent Files";
-                    action = ":lua Snacks.dashboard.pick('oldfiles')";
-                    padding = 1;
-                  }
-                  {
-                    icon = "󰠮";
-                    key = "i";
-                    desc = "Neorg Index";
-                    action = ":Neorg index";
-                    padding = 1;
-                  }
-                  {
-                    icon = "󰍃";
-                    key = "q";
-                    desc = "Quit";
-                    action = ":qa";
-                    padding = 2;
-                  }
-                  {
-                    icon = " ";
-                    title = "Projects";
-                    section = "projects";
-                    indent = 2;
-                  }
-                  {
-                    padding = [0 2];
-                    footer = "Don't you dare go hollow.";
-                  }
-                ];
-              };
-            };
-          };
           yazi-nvim.enable = true;
         };
       };
