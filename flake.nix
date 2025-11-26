@@ -29,16 +29,10 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
-    dms-cli = {
-      url = "github:AvengeMedia/danklinux";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
-
     dankMaterialShell = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
       inputs.dgop.follows = "dgop";
-      inputs.dms-cli.follows = "dms-cli";
     };
 
     niri = {
@@ -53,6 +47,11 @@
 
     textfox = {
       url = "github:adriankarlen/textfox";
+    };
+
+    nixarr = {
+      url = "github:rasmus-kirk/nixarr";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };
 

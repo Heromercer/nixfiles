@@ -6,6 +6,7 @@
   ...
 }: {
   imports = [
+    ../../nixos/arr.nix
     ../../nixos/audio.nix
     ../../nixos/bluetooth.nix
     ../../nixos/drives.nix
