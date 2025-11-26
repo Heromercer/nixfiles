@@ -7,11 +7,11 @@
   imports = [
     inputs.niri.homeModules.niri
   ];
-  #xdg.configFile."niri/config.kdl".source = ./config.kdl;
-
-  #services.hyprpolkitagent.enable = true;
+  services.hyprpolkitagent.enable = true;
   programs.niri.settings = {
     prefer-no-csd = true;
+
+    screenshot-path = "~/Pictures/screenshots";
 
     input = {
       keyboard = {
@@ -58,6 +58,62 @@
       size = config.home.pointerCursor.size;
     };
 
+    environment = {
+      XDG_CURRENT_DESKTOP = "niri";
+      QT_QPA_PLATFORM = "wayland";
+      ELECTRON_OZONE_PLATFORM_HINT = "auto";
+      QT_QPA_PLATFORMTHEME = "gtk3";
+      QT_QPA_PLATFORMTHEME_QT6 = "gtk3";
+    };
+
+    window-rules = [
+      {
+        matches = [
+          {is-active = false;}
+        ];
+        opacity = 0.9;
+      }
+
+      {
+        matches = [
+          {app-id = "kitty";}
+        ];
+        draw-border-with-background = false;
+      }
+
+      {
+        matches = [];
+        geometry-corner-radius = {
+          top-left = 12.0;
+          top-right = 12.0;
+          bottom-left = 12.0;
+          bottom-right = 12.0;
+        };
+        clip-to-geometry = true;
+      }
+
+      {
+        matches = [
+          {app-id = "^org\\.gnome\\.";}
+        ];
+        draw-border-with-background = false;
+        geometry-corner-radius = {
+          top-left = 12.0;
+          top-right = 12.0;
+          bottom-left = 12.0;
+          bottom-right = 12.0;
+        };
+        clip-to-geometry = true;
+      }
+
+      {
+        matches = [
+          {app-id = "org.quickshell$";}
+        ];
+        open-floating = true;
+      }
+    ];
+
     binds = with config.lib.niri.actions; {
       "Mod+Shift+Slash".action = show-hotkey-overlay;
       "Mod+Return".action.spawn-sh = "kitty -e fish -c 'fastfetch; exec fish'";
@@ -69,6 +125,18 @@
         action = toggle-overview;
         repeat = false;
       };
+
+      "Mod+D".action = spawn "dms" "ipc" "call" "spotlight" "toggle";
+      "Ctrl+Alt+Delete".action = spawn "dms" "ipc" "call" "powermenu" "toggle";
+      "Mod+T".action = spawn "dms" "ipc" "call" "clipboard" "toggle";
+      "Mod+M".action = spawn "dms" "ipc" "call" "processlist" "toggle";
+      "Mod+N".action = spawn "dms" "ipc" "call" "notifications" "toggle";
+      "Mod+Shift+Comma".action = spawn "dms" "ipc" "call" "settings" "toggle";
+      "Mod+P".action = spawn "dms" "ipc" "call" "notepad" "toggle";
+      "Mod+Alt+L".action = spawn "dms" "ipc" "call" "lock" "lock";
+      "Mod+Shift+C".action = spawn "dms" "ipc" "call" "control-center" "toggle";
+      "Mod+Shift+W".action = spawn "dms" "ipc" "call" "dankdash" "wallpaper";
+      "Mod+Shift+N".action = spawn "dms" "ipc" "call" "night" "toggle";
 
       "Mod+H".action = focus-column-left;
       "Mod+L".action = focus-column-right;
@@ -128,6 +196,45 @@
       "Mod+7".action = focus-workspace 7;
       "Mod+8".action = focus-workspace 8;
       "Mod+9".action = focus-workspace 9;
+      #"Mod+Ctrl+1".action = move-column-to-workspace 1;
+      #"Mod+Ctrl+2".action = move-column-to-workspace 2;
+      #"Mod+Ctrl+3".action = move-column-to-workspace 3;
+      #"Mod+Ctrl+4".action = move-column-to-workspace 4;
+      #"Mod+Ctrl+5".action = move-column-to-workspace 5;
+      #"Mod+Ctrl+6".action = move-column-to-workspace 6;
+      #"Mod+Ctrl+7".action = move-column-to-workspace 7;
+      #"Mod+Ctrl+8".action = move-column-to-workspace 8;
+      #"Mod+Ctrl+9".action = move-column-to-workspace 9;
+
+      "Mod+BracketLeft".action = consume-or-expel-window-left;
+      "Mod+BracketRight".action = consume-or-expel-window-right;
+
+      "Mod+Comma".action = consume-window-into-column;
+      "Mod+Period".action = expel-window-from-column;
+
+      "Mod+R".action = switch-preset-column-width;
+      "Mod+Shift+R".action = switch-preset-window-height;
+      "Mod+Ctrl+R".action = reset-window-height;
+      "Mod+F".action = maximize-column;
+      "Mod+Shift+F".action = fullscreen-window;
+      "Mod+Ctrl+F".action = expand-column-to-available-width;
+      "Mod+C".action = center-column;
+      "Mod+Ctrl+C".action = center-visible-columns;
+
+      "Mod+Minus".action = set-column-width "-10%";
+      "Mod+Equal".action = set-column-width "+10%";
+
+      "Mod+Shift+Minus".action = set-window-height "-10%";
+      "Mod+Shift+Equal".action = set-window-height "+10%";
+
+      "Mod+V".action = toggle-window-floating;
+      "Mod+Shift+V".action = switch-focus-between-floating-and-tiling;
+
+      "Mod+W".action = toggle-column-tabbed-display;
+
+      #"Print".action = screenshot;
+      #"Ctrl+Print".action = screenshot-screen;
+      #"Alt+Print".action = screenshot-window;
     };
 
     gestures = {

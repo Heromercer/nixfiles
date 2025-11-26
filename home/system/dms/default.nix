@@ -13,7 +13,7 @@
     enable = true;
     quickshell.package = inputs.nixpkgs-unstable.legacyPackages.x86_64-linux.quickshell;
     niri = {
-      enableKeybinds = true;
+      enableKeybinds = false;
       enableSpawn = true;
     };
 

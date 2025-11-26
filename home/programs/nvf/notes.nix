@@ -6,6 +6,7 @@
       setupOpts = {
         load = {
           "core.defaults".enable = true;
+          "core.keybinds".enable = true;
           "core.concealer".config = {
             folds = true;
             icon_preset = "basic";
