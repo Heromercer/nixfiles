@@ -14,6 +14,7 @@
     shellAliases = {
       nhs = "nh os switch";
       nhsu = "nh os switch -u";
+      nhc = "nh clean all --keep 10 --dry";
       check = "sudo nix flake check";
       nf = "cd .nixfiles";
     };

@@ -8,6 +8,7 @@
 in {
   home.packages = with pkgs;
     [
+      adw-gtk3
       ani-cli
       caligula
       catppuccin-cursors.latteLight

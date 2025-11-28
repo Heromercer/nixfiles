@@ -9,6 +9,7 @@
     ../../nixos/arr.nix
     ../../nixos/audio.nix
     ../../nixos/bluetooth.nix
+    ../../nixos/dankgreeter.nix
     ../../nixos/drives.nix
     ../../nixos/fonts.nix
     ../../nixos/gaming.nix
@@ -16,7 +17,7 @@
     ../../nixos/hyprland.nix
     ../../nixos/niri.nix
     ../../nixos/nix.nix
-    ../../nixos/tuigreet.nix
+    #    ../../nixos/tuigreet.nix
     ../../nixos/users.nix
     ../../nixos/utils.nix
 

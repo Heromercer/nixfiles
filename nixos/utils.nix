@@ -43,8 +43,6 @@ in {
     alacritty
     clang
     coreutils
-    emacs
-    emacs-all-the-icons-fonts
     fd
     git
     gparted

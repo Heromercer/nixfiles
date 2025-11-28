@@ -56,6 +56,7 @@
     cursor = {
       theme = config.home.pointerCursor.name;
       size = config.home.pointerCursor.size;
+      hide-after-inactive-ms = 500;
     };
 
     environment = {
@@ -64,6 +65,11 @@
       ELECTRON_OZONE_PLATFORM_HINT = "auto";
       QT_QPA_PLATFORMTHEME = "gtk3";
       QT_QPA_PLATFORMTHEME_QT6 = "gtk3";
+    };
+
+    layout = {
+      border.enable = false;
+      focus-ring.enable = false;
     };
 
     window-rules = [
@@ -112,6 +118,34 @@
         ];
         open-floating = true;
       }
+
+      {
+        matches = [
+          {app-id = "firefox";}
+          {app-id = "vesktop";}
+        ];
+        open-maximized = true;
+        open-on-output = "DP-3";
+      }
+
+      {
+        matches = [
+          {title = "Steam";}
+        ];
+        open-maximized = true;
+        open-on-output = "DP-1";
+      }
+
+      {
+        matches = [
+          {app-id = "steam";}
+        ];
+        excludes = [
+          {title = "Steam";}
+        ];
+        open-floating = true;
+        open-on-output = "DP-1";
+      }
     ];
 
     binds = with config.lib.niri.actions; {
@@ -125,6 +159,7 @@
         action = toggle-overview;
         repeat = false;
       };
+      "Mod+B".action = spawn "firefox";
 
       "Mod+D".action = spawn "dms" "ipc" "call" "spotlight" "toggle";
       "Ctrl+Alt+Delete".action = spawn "dms" "ipc" "call" "powermenu" "toggle";
