@@ -162,7 +162,7 @@
       "Mod+B".action = spawn "firefox";
 
       "Mod+D".action = spawn "dms" "ipc" "call" "spotlight" "toggle";
-      "Ctrl+Alt+Delete".action = spawn "dms" "ipc" "call" "powermenu" "toggle";
+      "Mod+X".action = spawn "dms" "ipc" "call" "powermenu" "toggle";
       "Mod+T".action = spawn "dms" "ipc" "call" "clipboard" "toggle";
       "Mod+M".action = spawn "dms" "ipc" "call" "processlist" "toggle";
       "Mod+N".action = spawn "dms" "ipc" "call" "notifications" "toggle";

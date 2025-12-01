@@ -1,6 +1,6 @@
 {
   imports = [
     ./fish.nix
-    ./nsTV.nix
+    #    ./nsTV.nix
   ];
 }
