@@ -4,6 +4,9 @@
       matches = [
         {is-active = false;}
       ];
+      excludes = [
+        {app-id = "firefox";}
+      ];
       opacity = 0.9;
     }
 

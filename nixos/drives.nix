@@ -11,7 +11,7 @@
     };
 
     "/mnt/archive" = {
-      device = "/dev/disk/by-uuid/5c170b67-c9e0-41ee-a6c1-98c6e27b9a90";
+      device = "/dev/disk/by-uuid/2b318b3c-5cff-4c00-84a7-0a10fb310058";
       fsType = "ext4";
       options = ["defaults" "nofail"];
     };

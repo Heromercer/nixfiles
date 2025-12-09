@@ -13,6 +13,7 @@ in {
       caligula
       catppuccin-cursors.latteLight
       jdk
+      mpv
       qt5.qtwayland
       qt6.qtwayland
       lazygit

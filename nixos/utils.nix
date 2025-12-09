@@ -5,13 +5,19 @@
 }: let
   hostname = config.var.hostname;
   timezone = config.var.timeZone;
+  hostId = config.var.hostId;
 in {
   networking.hostName = hostname;
   time.timeZone = timezone;
 
-  networking.networkmanager.enable = true;
+  networking = {
+    networkmanager.enable = true;
+    hostId = hostId;
+  };
   systemd.services.NetworkManager-wait-online.enable = false;
   environment.variables = {EDITOR = "nvim";};
+
+  boot.supportedFilesystems = ["zfs"];
 
   services = {
     xserver = {
@@ -24,6 +30,11 @@ in {
 
     gnome.gnome-keyring = {
       enable = true;
+    };
+
+    zfs = {
+      autoScrub.enable = true;
+      trim.enable = true;
     };
   };
 
@@ -40,7 +51,6 @@ in {
   };
 
   environment.systemPackages = with pkgs; [
-    alacritty
     clang
     coreutils
     fd

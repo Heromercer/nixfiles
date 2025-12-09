@@ -6,7 +6,7 @@
 }: {
   services.mpd = {
     enable = true;
-    musicDirectory = "/mnt/archive/Music";
+    musicDirectory = "/mnt/archive/disk/Music";
     extraConfig = ''
       audio_output {
       type    "pipewire"
