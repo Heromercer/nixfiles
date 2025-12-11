@@ -5,6 +5,6 @@
   inputs,
   ...
 }: {
-  programs.hyprland.enable = true;
-  programs.hyprland.package = inputs.hyprland.packages."${pkgs.stdenv.hostPlatform.system}".hyprland;
+  programs.hyprland.enable = false;
+  #programs.hyprland.package = inputs.hyprland.packages."${pkgs.stdenv.hostPlatform.system}".hyprland;
 }

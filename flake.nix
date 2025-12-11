@@ -9,11 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
-
     nixcord = {
       url = "github:kaylorben/nixcord";
       inputs.nixpkgs.follows = "nixpkgs-unstable";

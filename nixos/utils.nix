@@ -43,7 +43,8 @@ in {
   xdg = {
     portal = {
       enable = true;
-      extraPortals = [
+      xdgOpenUsePortal = true;
+      extraPortals = with pkgs; [
         pkgs.xdg-desktop-portal-gtk
         pkgs.xdg-desktop-portal-gnome
       ];
