@@ -17,7 +17,10 @@ in {
   systemd.services.NetworkManager-wait-online.enable = false;
   environment.variables = {EDITOR = "nvim";};
 
-  boot.supportedFilesystems = ["zfs"];
+  boot = {
+    supportedFilesystems = ["zfs"];
+    zfs.extraPools = ["games"];
+  };
 
   services = {
     xserver = {

@@ -25,6 +25,11 @@
           run = "cd /mnt/media/";
           on = ["g" "m" "3"];
         }
+
+        {
+          run = "cd /mnt/games/disk/";
+          on = ["g" "m" "4"];
+        }
       ];
     };
   };
