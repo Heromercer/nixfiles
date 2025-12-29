@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    inputs.dankMaterialShell.nixosModules.greeter
+    inputs.dms.nixosModules.greeter
   ];
   programs.dankMaterialShell.greeter = {
     enable = true;

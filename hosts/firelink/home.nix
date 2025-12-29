@@ -22,6 +22,7 @@
     ../../home/system/homeDir
     ../../home/system/hyprland
     ../../home/system/niri
+    ../../home/system/udiskie
 
     ../../home/pkgs
 

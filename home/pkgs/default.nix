@@ -10,6 +10,7 @@ in {
     [
       adw-gtk3
       ani-cli
+      calibre
       caligula
       catppuccin-cursors.latteLight
       jdk

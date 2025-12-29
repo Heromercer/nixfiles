@@ -35,6 +35,10 @@ in {
       enable = true;
     };
 
+    udisks2 = {
+      enable = true;
+    };
+
     zfs = {
       autoScrub.enable = true;
       trim.enable = true;
@@ -66,6 +70,7 @@ in {
     polkit
     ripgrep
     tree-sitter
+    udiskie
     wget
   ];
 }

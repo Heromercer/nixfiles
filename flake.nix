@@ -19,15 +19,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    dgop = {
-      url = "github:AvengeMedia/dgop";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
-
-    dankMaterialShell = {
+    dms = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
-      inputs.dgop.follows = "dgop";
     };
 
     niri = {

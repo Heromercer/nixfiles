@@ -24,6 +24,7 @@
       };
       mouse = {
         enable = true;
+        accel-speed = -0.7;
       };
       touchpad = {
         enable = true;
