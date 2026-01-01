@@ -13,6 +13,7 @@
   programs.dankMaterialShell = {
     enable = true;
     quickshell.package = inputs.nixpkgs-unstable.legacyPackages.x86_64-linux.quickshell;
+    dgop.package = inputs.nixpkgs-unstable.legacyPackages.x86_64-linux.dgop;
     niri = {
       enableKeybinds = false;
       enableSpawn = true;

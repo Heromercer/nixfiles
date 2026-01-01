@@ -13,11 +13,14 @@ in {
       calibre
       caligula
       catppuccin-cursors.latteLight
+      hunspell
+      hunspellDicts.en_US
       jdk
       mpv
       qt5.qtwayland
       qt6.qtwayland
       lazygit
+      libreoffice-still
       libsForQt5.qt5ct
       hyprshot
       hyprpicker
