@@ -12,6 +12,7 @@
         repeat = false;
       };
       "Mod+B".action = spawn "firefox";
+      "Mod+E".action.spawn-sh = "kitty -e fish -c 'y; exec fish'";
 
       "Mod+D".action = spawn "dms" "ipc" "call" "spotlight" "toggle";
       "Mod+X".action = spawn "dms" "ipc" "call" "powermenu" "toggle";

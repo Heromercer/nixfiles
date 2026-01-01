@@ -41,6 +41,7 @@
 
         clipboard = {
           enable = true;
+          registers = "unnamedplus";
         };
 
         dashboard = {
