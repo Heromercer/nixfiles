@@ -12,8 +12,8 @@ in {
 
   networking = {
     networkmanager.enable = true;
-    hostId = hostId;
   };
+
   systemd.services.NetworkManager-wait-online.enable = false;
   environment.variables = {EDITOR = "nvim";};
 
