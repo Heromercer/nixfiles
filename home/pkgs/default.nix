@@ -39,6 +39,7 @@ in {
       direnv
       meson
       matugen
+      upscaler
       cava
       cliphist
       btop

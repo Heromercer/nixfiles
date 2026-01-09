@@ -8,7 +8,7 @@
   programs.firefox.enable = true;
   textfox = {
     enable = true;
-    profile = "main";
+    profiles = ["main"];
     config = {
       background = {
         color = "#1e1e2e"; # Catppuccin Mocha Base

@@ -6,18 +6,18 @@
   ...
 }: {
   imports = [
-    inputs.dms.homeModules.dankMaterialShell.default
-    inputs.dms.homeModules.dankMaterialShell.niri
+    inputs.dms.homeModules.dank-material-shell
+    #    inputs.dms.homeModules.niri
   ];
 
-  programs.dankMaterialShell = {
+  programs.dank-material-shell = {
     enable = true;
     quickshell.package = inputs.nixpkgs-unstable.legacyPackages.x86_64-linux.quickshell;
     dgop.package = inputs.nixpkgs-unstable.legacyPackages.x86_64-linux.dgop;
-    niri = {
-      enableKeybinds = false;
-      enableSpawn = true;
-    };
+    #    niri = {
+    #     enableKeybinds = false;
+    #     enableSpawn = true;
+    #  };
 
     enableSystemMonitoring = true;
     enableVPN = true;

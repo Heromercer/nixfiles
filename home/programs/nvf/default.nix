@@ -99,7 +99,10 @@
           style = "mocha";
         };
 
-        treesitter.enable = true;
+        treesitter = {
+        enable = true;
+        addDefaultGrammars = true;
+        };
 
         ui = {
           noice.enable = true;
