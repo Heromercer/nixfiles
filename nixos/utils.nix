@@ -66,6 +66,7 @@ in {
     gparted
     kitty
     neovim
+    nix-init
     nodejs
     polkit
     ripgrep
