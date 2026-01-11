@@ -44,6 +44,10 @@
           registers = "unnamedplus";
         };
 
+        comments.comment-nvim = {
+          enable = true;
+        };
+
         dashboard = {
           alpha = {
             enable = false;
@@ -100,8 +104,8 @@
         };
 
         treesitter = {
-        enable = true;
-        addDefaultGrammars = true;
+          enable = true;
+          addDefaultGrammars = true;
         };
 
         ui = {
