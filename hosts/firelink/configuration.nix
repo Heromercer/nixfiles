@@ -20,7 +20,7 @@
     #    ../../nixos/tuigreet.nix
     ../../nixos/users.nix
     ../../nixos/utils.nix
-
+    ../../nixos/virtualisation.nix
     ./hardware-configuration.nix
     ./variables.nix
   ];
