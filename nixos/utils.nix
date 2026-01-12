@@ -23,20 +23,25 @@ in {
   };
 
   services = {
-    xserver = {
-      enable = false;
+    gnome.gnome-keyring = {
+      enable = true;
+    };
+
+    mysql = {
+      enable = true;
+      package = pkgs.mariadb;
     };
 
     openssh = {
       enable = true;
     };
 
-    gnome.gnome-keyring = {
+    udisks2 = {
       enable = true;
     };
 
-    udisks2 = {
-      enable = true;
+    xserver = {
+      enable = false;
     };
 
     zfs = {
@@ -65,7 +70,6 @@ in {
     git
     gparted
     kitty
-    mariadb
     neovim
     nix-init
     nodejs
