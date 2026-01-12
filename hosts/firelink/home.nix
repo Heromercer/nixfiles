@@ -29,7 +29,7 @@
     ./variables.nix
   ];
 
-  home.enableNixpkgsReleaseCheck = false;
+  #  home.enableNixpkgsReleaseCheck = false;
 
   home.username = "alec";
   home.homeDirectory = "/home/alec";
