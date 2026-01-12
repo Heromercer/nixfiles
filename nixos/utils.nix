@@ -65,6 +65,7 @@ in {
     git
     gparted
     kitty
+    mariadb
     neovim
     nix-init
     nodejs
