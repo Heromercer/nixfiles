@@ -105,7 +105,6 @@
 
         treesitter = {
           enable = true;
-          addDefaultGrammars = true;
         };
 
         ui = {
