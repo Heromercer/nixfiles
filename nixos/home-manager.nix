@@ -9,7 +9,7 @@
     backupFileExtension = "backup";
     extraSpecialArgs = {
       inherit inputs;
-      pkgs-unstable = import nixpkgs-unstable {
+      pkgs-unstable-hm = import nixpkgs-unstable {
         system = "x86_64-linux";
         config.allowUnfree = true;
       };
