@@ -49,11 +49,21 @@
     };
   };
 
-  outputs = inputs @ {nixpkgs, ...}: {
+  outputs = inputs @ {
+    nixpkgs,
+    nixpkgs-unstable,
+    ...
+  }: {
     nixosConfigurations = {
       majula = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = {inherit inputs;};
+        specialArgs = {
+          inherit inputs;
+          pkgs-unstable = import nixpkgs-unstable {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
+        };
         modules = [
           ./hosts/majula/configuration.nix
           inputs.home-manager.nixosModules.home-manager
@@ -62,7 +72,13 @@
       };
       firelink = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = {inherit inputs;};
+        specialArgs = {
+          inherit inputs;
+          pkgs-unstable = import nixpkgs-unstable {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
+        };
         modules = [
           ./hosts/firelink/configuration.nix
           inputs.home-manager.nixosModules.home-manager

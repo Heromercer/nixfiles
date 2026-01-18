@@ -1,11 +1,11 @@
 {
   pkgs,
+  pkgs-unstable,
   config,
   ...
 }: let
   hostname = config.var.hostname;
   timezone = config.var.timeZone;
-  hostId = config.var.hostId;
 in {
   networking.hostName = hostname;
   time.timeZone = timezone;
@@ -71,20 +71,22 @@ in {
     };
   };
 
-  environment.systemPackages = with pkgs; [
-    clang
-    coreutils
-    fd
-    git
-    gparted
-    kitty
-    neovim
-    nix-init
-    nodejs
-    polkit
-    ripgrep
-    tree-sitter
-    udiskie
-    wget
-  ];
+  environment.systemPackages = with pkgs;
+    [
+      clang
+      coreutils
+      fd
+      git
+      gparted
+      kitty
+      neovim
+      nix-init
+      nodejs
+      polkit
+      ripgrep
+      tree-sitter
+      udiskie
+      wget
+    ]
+    ++ [pkgs-unstable.dms-shell];
 }
