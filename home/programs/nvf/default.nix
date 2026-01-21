@@ -9,15 +9,14 @@
     ./dashboard.nix
     ./notes.nix
     ./options.nix
+    ./tabline.nix
+    ./terminal.nix
+    ./theme.nix
   ];
   programs.nvf = {
     enable = true;
     settings = {
       vim = {
-        assistant = {
-          codecompanion-nvim.enable = true;
-        };
-
         autopairs = {
           nvim-autopairs.enable = true;
         };
@@ -68,25 +67,8 @@
 
         statusline.lualine.enable = true;
 
-        tabline = {
-          nvimBufferline = {
-            enable = true;
-            mappings = {
-              cycleNext = "<S-l>";
-              cyclePrevious = "<S-h>";
-              closeCurrent = "<leader>bd";
-            };
-          };
-        };
-
         telescope = {
           enable = true;
-        };
-
-        theme = {
-          enable = true;
-          name = "catppuccin";
-          style = "mocha";
         };
 
         treesitter = {
@@ -99,17 +81,6 @@
         };
 
         undoFile.enable = true;
-
-        terminal.toggleterm = {
-          enable = true;
-          mappings = {
-            open = "<c-/>";
-          };
-          setupOpts = {
-            direction = "float";
-          };
-          lazygit.enable = true;
-        };
 
         utility = {
           yazi-nvim.enable = true;
