@@ -14,11 +14,6 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
-    agenix = {
-      url = "github:ryantm/agenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     dms = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
@@ -67,7 +62,6 @@
         modules = [
           ./hosts/majula/configuration.nix
           inputs.home-manager.nixosModules.home-manager
-          inputs.agenix.nixosModules.default
         ];
       };
       firelink = nixpkgs.lib.nixosSystem {
@@ -82,7 +76,6 @@
         modules = [
           ./hosts/firelink/configuration.nix
           inputs.home-manager.nixosModules.home-manager
-          inputs.agenix.nixosModules.default
         ];
       };
       installerIso = nixpkgs.lib.nixosSystem {
