@@ -4,12 +4,14 @@
   lib,
   inputs,
   ...
-}: {
+}:
+{
   imports = [
     inputs.nvf.homeManagerModules.default
 
     ./dashboard.nix
     ./notes.nix
+    ./options.nix
   ];
   programs.nvf = {
     enable = true;
@@ -48,12 +50,6 @@
           enable = true;
         };
 
-        dashboard = {
-          alpha = {
-            enable = false;
-          };
-        };
-
         git.gitsigns.enable = true;
 
         formatter = {
@@ -64,18 +60,11 @@
           nix.enable = true;
           markdown.enable = true;
           python.enable = true;
-          nix.format.enable = true;
         };
 
         lsp = {
           enable = true;
           formatOnSave = true;
-        };
-
-        options = {
-          signcolumn = "yes";
-          termguicolors = true;
-          conceallevel = 2;
         };
 
         searchCase = "smart";
@@ -105,6 +94,7 @@
 
         treesitter = {
           enable = true;
+          indent.enable = false;
         };
 
         ui = {
