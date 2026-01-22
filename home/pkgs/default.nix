@@ -43,6 +43,7 @@ in
       direnv
       meson
       matugen
+      protontricks
       upscaler
       cava
       cliphist

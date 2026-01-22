@@ -79,6 +79,7 @@ in
     with pkgs;
     [
       amdgpu_top
+      appimage-run
       clang
       coreutils
       fd
@@ -89,6 +90,7 @@ in
       nix-init
       nodejs
       polkit
+      python315
       ripgrep
       tree-sitter
       udiskie
