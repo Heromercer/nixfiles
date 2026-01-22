@@ -3,10 +3,12 @@
   pkgs-unstable,
   config,
   ...
-}: let
+}:
+let
   hostname = config.var.hostname;
   timezone = config.var.timeZone;
-in {
+in
+{
   networking.hostName = hostname;
   time.timeZone = timezone;
 
@@ -19,15 +21,17 @@ in {
       }
     ];
     defaultGateway = "192.168.50.1";
-    nameservers = ["8.8.8.8"];
+    nameservers = [ "8.8.8.8" ];
   };
 
   systemd.services.NetworkManager-wait-online.enable = false;
-  environment.variables = {EDITOR = "nvim";};
+  environment.variables = {
+    EDITOR = "nvim";
+  };
 
   boot = {
-    supportedFilesystems = ["zfs"];
-    zfs.extraPools = ["games"];
+    supportedFilesystems = [ "zfs" ];
+    zfs.extraPools = [ "games" ];
   };
 
   services = {
@@ -71,8 +75,10 @@ in {
     };
   };
 
-  environment.systemPackages = with pkgs;
+  environment.systemPackages =
+    with pkgs;
     [
+      amdgpu_top
       clang
       coreutils
       fd
@@ -88,5 +94,5 @@ in {
       udiskie
       wget
     ]
-    ++ [pkgs-unstable.dms-shell];
+    ++ [ pkgs-unstable.dms-shell ];
 }

@@ -9,6 +9,7 @@
   imports = [
     inputs.dms.homeModules.dank-material-shell
     inputs.dms.homeModules.niri
+    inputs.dms-plugin-registry.modules.default
   ];
 
   programs.dank-material-shell = {
@@ -30,5 +31,10 @@
     enableDynamicTheming = true;
     enableAudioWavelength = true;
     enableCalendarEvents = true;
+
+    plugins = {
+      dockerManager.enable = true;
+      amdGpuMonitor.enable = true;
+    };
   };
 }
