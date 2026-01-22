@@ -3,16 +3,20 @@
   pkgs,
   lib,
   ...
-}: let
+}:
+let
   hostname = config.var.hostname;
-in {
-  home.packages = with pkgs;
+in
+{
+  home.packages =
+    with pkgs;
     [
       adw-gtk3
       ani-cli
       calibre
       caligula
       catppuccin-cursors.latteLight
+      gearlever
       hunspell
       hunspellDicts.en_US
       jdk
