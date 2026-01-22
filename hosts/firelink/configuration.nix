@@ -4,7 +4,8 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ../../nixos/arr.nix
     ../../nixos/audio.nix
