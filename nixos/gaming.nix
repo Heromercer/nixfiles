@@ -12,8 +12,10 @@
   programs.gamemode.enable = true;
 
   environment.systemPackages = with pkgs; [
+    faugus-launcher
     mangohud
     protontricks
+    wineWowPackages.waylandFull
     winetricks
   ];
 }
