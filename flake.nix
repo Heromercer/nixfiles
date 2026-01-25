@@ -44,46 +44,48 @@
     };
   };
 
-  outputs = inputs @ {
-    nixpkgs,
-    nixpkgs-unstable,
-    ...
-  }: {
-    nixosConfigurations = {
-      majula = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = {
-          inherit inputs;
-          pkgs-unstable = import nixpkgs-unstable {
-            system = "x86_64-linux";
-            config.allowUnfree = true;
+  outputs =
+    inputs@{
+      nixpkgs,
+      nixpkgs-unstable,
+      ...
+    }:
+    {
+      nixosConfigurations = {
+        majula = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = {
+            inherit inputs;
+            pkgs-unstable = import nixpkgs-unstable {
+              system = "x86_64-linux";
+              config.allowUnfree = true;
+            };
           };
+          modules = [
+            ./hosts/majula/configuration.nix
+            inputs.home-manager.nixosModules.home-manager
+          ];
         };
-        modules = [
-          ./hosts/majula/configuration.nix
-          inputs.home-manager.nixosModules.home-manager
-        ];
-      };
-      firelink = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = {
-          inherit inputs;
-          pkgs-unstable = import nixpkgs-unstable {
-            system = "x86_64-linux";
-            config.allowUnfree = true;
+        firelink = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = {
+            inherit inputs;
+            pkgs-unstable = import nixpkgs-unstable {
+              system = "x86_64-linux";
+              config.allowUnfree = true;
+            };
           };
+          modules = [
+            ./hosts/firelink/configuration.nix
+            inputs.home-manager.nixosModules.home-manager
+          ];
         };
-        modules = [
-          ./hosts/firelink/configuration.nix
-          inputs.home-manager.nixosModules.home-manager
-        ];
-      };
-      installerIso = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
-        modules = [
-          ./hosts/isoImage/configuration.nix
-        ];
+        installerIso = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/isoImage/configuration.nix
+          ];
+        };
       };
     };
-  };
 }
