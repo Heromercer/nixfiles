@@ -94,6 +94,7 @@ in
       ripgrep
       tree-sitter
       udiskie
+      unzip
       wget
     ]
     ++ [ pkgs-unstable.dms-shell ];
