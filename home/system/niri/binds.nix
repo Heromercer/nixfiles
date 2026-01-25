@@ -1,4 +1,5 @@
-{config, ...}: {
+{ config, ... }:
+{
   programs.niri.settings = {
     binds = with config.lib.niri.actions; {
       "Mod+Shift+Slash".action = show-hotkey-overlay;
@@ -13,6 +14,7 @@
       };
       "Mod+B".action = spawn "firefox";
       "Mod+E".action.spawn-sh = "kitty -e fish -c 'y; exec fish'";
+      "Mod+SHift+M".action.spawn-sh = "kitty -e rmpc";
 
       "Mod+D".action = spawn "dms" "ipc" "call" "spotlight" "toggle";
       "Mod+X".action = spawn "dms" "ipc" "call" "powermenu" "toggle";
