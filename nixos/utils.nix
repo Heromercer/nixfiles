@@ -52,6 +52,10 @@ in
       enable = true;
     };
 
+    upower = {
+      enable = true;
+    };
+
     xserver = {
       enable = false;
     };

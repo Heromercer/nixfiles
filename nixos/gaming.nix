@@ -17,6 +17,7 @@
     mangohud
     protontricks
     protonup-qt
+    wineWowPackages.stable
     wineWowPackages.waylandFull
     winetricks
     xdelta
