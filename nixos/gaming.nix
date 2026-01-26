@@ -15,7 +15,6 @@
   environment.systemPackages = with pkgs; [
     faugus-launcher
     mangohud
-    protontricks
     protonup-qt
     wineWowPackages.stable
     wineWowPackages.waylandFull
