@@ -76,6 +76,12 @@
       QT_QPA_PLATFORMTHEME_QT6 = "gtk3";
     };
 
+    layer-rules = [
+      {
+        place-within-backdrop = true;
+      }
+    ];
+
     layout = {
       border.enable = false;
       focus-ring.enable = false;
