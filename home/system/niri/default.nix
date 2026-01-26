@@ -17,6 +17,10 @@
 
     screenshot-path = "~/Pictures/screenshots";
 
+    spawn-at-startup = [
+      { command = [ "xwayland-satellite" ]; }
+    ];
+
     input = {
       keyboard = {
         repeat-rate = 25;

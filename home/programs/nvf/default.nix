@@ -53,8 +53,9 @@
         };
 
         languages = {
-          nix.enable = true;
+          html.enable = true;
           markdown.enable = true;
+          nix.enable = true;
           python.enable = true;
         };
 
