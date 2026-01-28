@@ -16,6 +16,9 @@
     faugus-launcher
     mangohud
     protonup-qt
+    wine
+    (wine.override { wineBuild = "wine64"; })
+    wine64
     wineWowPackages.stable
     wineWowPackages.waylandFull
     winetricks

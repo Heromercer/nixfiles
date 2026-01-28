@@ -53,6 +53,7 @@
         };
 
         languages = {
+          css.enable = true;
           html.enable = true;
           markdown.enable = true;
           nix.enable = true;
