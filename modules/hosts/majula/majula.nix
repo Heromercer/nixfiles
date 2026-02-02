@@ -3,8 +3,8 @@
   flake.modules.nixos.majula =
     { pkgs, ... }:
     {
-      imports = with config.flake.modules.nixos; [
-        facter
+      imports = [
+        ./hardware-configuration.nix
       ];
       boot.loader = {
         systemd-boot.enable = true;
