@@ -34,8 +34,6 @@
     zfs.extraPools = [ "games" ];
   };
 
-  hardware.facter.reportPath = ./facter.json;
-
   services.printing.enable = true;
 
   home-manager.users."${config.var.username}" = import ./home.nix;
