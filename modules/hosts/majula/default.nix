@@ -1,6 +1,6 @@
 { inputs, self, ... }:
 {
-  flake.modules.nixos.majula =
+  flake.modules.nixos."hosts/majula" =
     {
       config,
       pkgs,
@@ -17,7 +17,7 @@
       boot.loader.systemd-boot.enable = true;
       boot.loader.efi.canTouchEfiVariables = true;
 
-      networking.hostname = "majula";
+      networking.hostName = "majula";
       time.timeZone = "America/New_York";
 
       networking.networkmanager.enable = true;

@@ -2,7 +2,7 @@
 {
   flake.modules.nixos.alec = {
     users.users.alec = {
-      isNoramlUser = true;
+      isNormalUser = true;
       extraGroups = [
         "networkmanager"
         "wheel"
