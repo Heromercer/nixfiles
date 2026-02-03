@@ -1,6 +1,6 @@
 { inputs, self, ... }:
 {
-  flake.modules.nixos."hosts/majula" =
+  flake.modules.nixos.majula =
     {
       config,
       pkgs,
@@ -8,11 +8,31 @@
       ...
     }:
     {
-      imports = with config.flake.modules.nixos; [
+      imports = with self.nixosModules; [
         base
 
         alec
       ];
+
+      home-manager = {
+        useGlobalPkgs = true;
+        useUserPackages = true;
+        users.alec = {
+          imports = with self.homeModules; [
+            git
+          ];
+        };
+      };
+
+      environment.systemPackages = with pkgs; [
+        git
+        neovim
+        lazygit
+      ];
+
+      environment.variables = {
+        EDITOR = "nvim";
+      };
 
       boot.loader.systemd-boot.enable = true;
       boot.loader.efi.canTouchEfiVariables = true;

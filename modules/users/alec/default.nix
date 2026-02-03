@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
-  flake.modules.nixos.alec = {
+  flake.nixosModules.alec = {
     users.users.alec = {
       isNormalUser = true;
       extraGroups = [
