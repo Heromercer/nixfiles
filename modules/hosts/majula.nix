@@ -8,8 +8,21 @@
       ...
     }:
     {
+      imports = with config.flake.modules.nixos; [
+        base
+
+        alec
+      ];
+
       boot.loader.systemd-boot.enable = true;
       boot.loader.efi.canTouchEfiVariables = true;
+
+      networking.hostname = "majula";
+      time.timeZone = "America/New_York";
+
+      networking.networkmanager.enable = true;
+
+      systemd.services.NetworkManager-wait-online.enable = false;
 
       boot.initrd.availableKernelModules = [
         "nvme"
