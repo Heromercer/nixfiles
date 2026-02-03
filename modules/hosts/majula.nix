@@ -18,7 +18,7 @@
         useGlobalPkgs = true;
         useUserPackages = true;
         users.alec = {
-          imports = with self.homeModules; [
+          imports = with config.flake.modules.homeManager; [
             base
             git
           ];

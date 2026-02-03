@@ -1,6 +1,6 @@
 { input, config, ... }:
 {
-  flake.homeModules.git =
+  flake.modules.homeManager.git =
     { config, ... }:
     {
       programs.git = {

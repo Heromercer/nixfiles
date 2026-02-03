@@ -1,6 +1,6 @@
 { config, ... }:
 {
-  flake.homeModules.base =
+  flake.modules.homeManager.base =
     { config, pkgs, ... }:
     {
       home.username = "alec";
