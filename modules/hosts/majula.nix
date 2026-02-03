@@ -19,6 +19,7 @@
         useUserPackages = true;
         users.alec = {
           imports = with self.homeModules; [
+            base
             git
           ];
         };
