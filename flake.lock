@@ -1,5 +1,20 @@
 {
   "nodes": {
+    "den": {
+      "locked": {
+        "lastModified": 1769935356,
+        "narHash": "sha256-84fhQU1vJ9xB/j7fNcexdOVYqNV4HRNVjC0eikmAeIQ=",
+        "owner": "vic",
+        "repo": "den",
+        "rev": "32946bc1e24e0014bcf9f1482896f9e2994a1614",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vic",
+        "repo": "den",
+        "type": "github"
+      }
+    },
     "dms": {
       "inputs": {
         "nixpkgs": [
@@ -454,6 +469,7 @@
     },
     "root": {
       "inputs": {
+        "den": "den",
         "dms": "dms",
         "dms-plugin-registry": "dms-plugin-registry",
         "flake-parts": "flake-parts",
