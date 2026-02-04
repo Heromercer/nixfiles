@@ -1,7 +1,8 @@
 { inputs, den, ... }:
 {
-  _module.args.__findFile = den.lib.__findFile;
-
   systems = builtins.attrNames den.hosts;
   imports = [ inputs.den.flakeModule ];
+
+  den.hosts.x86_64-linux.igloo.users.tux = { };
+  den.aspects.igloo = { };
 }
