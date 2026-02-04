@@ -55,33 +55,6 @@
     systems = {
       url = "github:nix-systems/default-linux";
     };
-
-    git-hooks-nix = {
-      url = "github:cachix/git-hooks.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    nix-index-database = {
-      url = "github:nix-community/nix-index-database";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    treefmt-nix = {
-      url = "github:numtide/treefmt-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    den = {
-      url = "github:vic/den";
-    };
-
-    flake-aspects = {
-      url = "github:vic/flake-aspects";
-    };
-
-    flake-file = {
-      url = "github:vic/flake-file";
-    };
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
