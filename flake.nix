@@ -71,8 +71,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixos-facter-modules = {
-      url = "github:numtide/nixos-facter-modules";
+    den = {
+      url = "github:vic/den";
+    };
+
+    flake-aspects = {
+      url = "github:vic/flake-aspects";
+    };
+
+    flake-file = {
+      url = "github:vic/flake-file";
     };
   };
 
