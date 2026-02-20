@@ -1,10 +1,13 @@
 {
   config,
   inputs,
+  pkgs,
   ...
-}: let
+}:
+let
   autoGarbageCollector = config.var.autoGarbageCollector;
-in {
+in
+{
   nixpkgs.config = {
     allowUnfree = true;
     allowBroken = false;
@@ -13,7 +16,10 @@ in {
   nix = {
     settings = {
       auto-optimise-store = true;
-      experimental-features = ["nix-command" "flakes"];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
     };
     gc = {
       automatic = autoGarbageCollector;
@@ -22,4 +28,8 @@ in {
       options = "--delete-older-than 7d";
     };
   };
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+  ];
 }

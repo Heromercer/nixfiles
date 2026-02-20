@@ -23,5 +23,6 @@
     wineWowPackages.waylandFull
     winetricks
     xdelta
+    xorg.xrandr
   ];
 }
