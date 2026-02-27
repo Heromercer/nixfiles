@@ -2,7 +2,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   programs.rmpc = {
     enable = true;
     config = ''
@@ -245,4 +246,8 @@
         ),
     )
   '';
+
+  home.packages = with pkgs; [
+    easytag
+  ];
 }
