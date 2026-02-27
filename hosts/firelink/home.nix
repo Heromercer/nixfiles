@@ -27,6 +27,8 @@
 
     ../../home/pkgs
 
+    ../../pkgs/ytaudio.nix
+
     ./variables.nix
   ];
 

@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   security.rtkit.enable = true;
   services.pulseaudio.enable = false;
@@ -9,4 +10,8 @@
     pulse.enable = true;
     jack.enable = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    ffmpeg-full
+  ];
 }
