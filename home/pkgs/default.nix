@@ -56,6 +56,5 @@ in
       #katawa-shoujo-re-engineered
       prismlauncher
       shadps4
-      rpcs3
     ];
 }

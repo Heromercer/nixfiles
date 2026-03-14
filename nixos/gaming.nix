@@ -16,6 +16,7 @@
     faugus-launcher
     mangohud
     protonup-qt
+    rpcs3
     wine
     (wine.override { wineBuild = "wine64"; })
     wine64
