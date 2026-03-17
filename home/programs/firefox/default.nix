@@ -3,12 +3,13 @@
   lib,
   inputs,
   ...
-}: {
-  imports = [inputs.textfox.homeManagerModules.default];
+}:
+{
+  imports = [ inputs.textfox.homeManagerModules.default ];
   programs.firefox.enable = true;
   textfox = {
     enable = true;
-    profiles = ["main"];
+    profiles = [ "main" ];
     config = {
       background = {
         color = "#1e1e2e"; # Catppuccin Mocha Base
@@ -31,12 +32,8 @@
         accent = "#cba6f7"; # Catppuccin Mocha Mauve
       };
       tabs = {
-        horizontal = {
-          enable = true;
-        };
-        vertical = {
-          margin = "1.0rem";
-        };
+        horizontal.enable = true;
+        vertical.enable = true;
       };
     };
   };
