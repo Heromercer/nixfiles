@@ -10,7 +10,7 @@
           "core.defaults".enable = true;
           "core.keybinds".enable = true;
           "core.concealer".config = {
-            folds = true;
+            folds = false;
             icon_preset = "basic";
           };
           "core.dirman".config = {
