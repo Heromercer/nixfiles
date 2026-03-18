@@ -80,6 +80,7 @@ in
       neovim
       nix-init
       nodejs
+      npins
       polkit
       python315
       ripgrep
