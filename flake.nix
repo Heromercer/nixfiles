@@ -89,12 +89,6 @@
             inputs.home-manager.nixosModules.home-manager
           ];
         };
-        installerIso = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
-          modules = [
-            ./hosts/isoImage/configuration.nix
-          ];
-        };
       };
     };
 }
