@@ -51,6 +51,10 @@
     import-tree = {
       url = "github:vic/import-tree";
     };
+
+    den = {
+      url = "github:vic/den";
+    };
   };
 
   outputs =
