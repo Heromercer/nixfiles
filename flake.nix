@@ -55,6 +55,10 @@
     systems = {
       url = "github:nix-systems/default-linux";
     };
+
+    den = {
+      url = "github:vic/den";
+    };
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
