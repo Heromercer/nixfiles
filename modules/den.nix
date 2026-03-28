@@ -6,8 +6,8 @@
   den.hosts.x86_64-linux.majula.users.alec = {};
 
   den.aspects.majula = {
-    includes = [den.provides.hostname];
-    nixos = {pkgs, config, ...}: {environment.systemPackages = with pkgs; [neovim hello git ];
+    includes = [den.provides.hostname den.aspects.git];
+    nixos = {pkgs, config, ...}: {environment.systemPackages = with pkgs; [neovim hello];
     imports = [./_majula-hardware.nix];
     networking.networkmanager.enable = true;
     nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -16,7 +16,7 @@
 
   den.aspects.alec = {
     includes = [den.provides.define-user den.provides.primary-user den.aspects.git];
-    homeManager = {pkgs, ...}: {home.packages = [pkgs.cowsay pkgs.lazygit];
+    homeManager = {pkgs, ...}: {home.packages = [pkgs.cowsay ];
     programs.home-manager.enable = true;
     };
   };

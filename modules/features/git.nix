@@ -1,9 +1,18 @@
 {den, lib, ... }:
 {
   den.aspects.git = {
-    homeManager = 
-    {config, ...}:
+    nixos = {pkgs, ...}:
     {
+      environment.systemPackages = with pkgs; [
+	git
+      ];
+    };
+    homeManager = 
+    {config, pkgs, ...}:
+    {
+      home.packages = with pkgs; [
+        lazygit
+      ];
       programs.git = {
 	enable = true;
 	settings = {
