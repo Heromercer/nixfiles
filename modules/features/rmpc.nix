@@ -6,7 +6,10 @@
 }:
 {
   mercer.rmpc = {
-    includes = [ <mercer/services/mpd> ];
+    includes = [
+      <mercer/services/mpd>
+      <mercer/yt-audio>
+    ];
     homeManager =
       { pkgs, ... }:
       {

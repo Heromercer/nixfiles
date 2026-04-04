@@ -15,7 +15,6 @@
           kitty
           niri
           rmpc
-          yt-audio
         ];
       };
 
