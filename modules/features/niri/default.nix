@@ -1,0 +1,127 @@
+{
+  den,
+  lib,
+  inputs,
+  mercer,
+  ...
+}:
+{
+  mercer.niri = {
+    includes = [ mercer.cursor ];
+
+    nixos =
+      { pkgs, ... }:
+      {
+        programs.niri.enable = true;
+        systemd.user.services.niri-flake-polkit.enable = false;
+        services = {
+          gnome.gnome-keyring = {
+            enable = true;
+          };
+        };
+        environment.systemPackages = with pkgs; [
+          adw-gtk3
+          brightnessctl
+          gnome-themes-extra
+          libsForQt5.qt5ct
+          qt5.qtwayland
+          qt6.qtwayland
+          xwayland-satellite
+        ];
+      };
+
+    homeManager =
+      { config, ... }:
+      {
+
+        imports = [
+          inputs.niri.homeModules.niri
+          ./_binds.nix
+          ./_windowRules.nix
+        ];
+        # xdg.configFile."niri/config.kdl".source = ./config.kdl;
+        services.hyprpolkitagent.enable = true;
+        programs.niri.settings = {
+          prefer-no-csd = true;
+
+          hotkey-overlay.skip-at-startup = true;
+
+          screenshot-path = "~/Pictures/screenshots";
+
+          spawn-at-startup = [
+            { command = [ "xwayland-satellite" ]; }
+          ];
+
+          input = {
+            keyboard = {
+              repeat-rate = 25;
+              repeat-delay = 200;
+              numlock = true;
+              xkb = { };
+            };
+            mouse = {
+              enable = true;
+              accel-speed = -0.7;
+            };
+            touchpad = {
+              enable = true;
+              tap = true;
+            };
+            focus-follows-mouse = {
+              enable = true;
+              max-scroll-amount = "0%";
+            };
+          };
+
+          outputs = {
+            "DP-1" = {
+              mode = {
+                width = 2560;
+                height = 1440;
+                refresh = 144.006;
+              };
+              scale = 1;
+            };
+
+            "DP-3" = {
+              mode = {
+                width = 2560;
+                height = 1440;
+                refresh = 144.006;
+              };
+              scale = 1;
+            };
+          };
+
+          cursor = {
+            theme = config.home.pointerCursor.name;
+            size = config.home.pointerCursor.size;
+            hide-after-inactive-ms = 500;
+          };
+
+          environment = {
+            XDG_CURRENT_DESKTOP = "niri";
+            QT_QPA_PLATFORM = "wayland";
+            ELECTRON_OZONE_PLATFORM_HINT = "auto";
+            QT_QPA_PLATFORMTHEME = "gtk3";
+            QT_QPA_PLATFORMTHEME_QT6 = "gtk3";
+          };
+
+          layer-rules = [
+            {
+              place-within-backdrop = true;
+            }
+          ];
+
+          layout = {
+            border.enable = false;
+            focus-ring.enable = false;
+          };
+
+          gestures = {
+            hot-corners.enable = false;
+          };
+        };
+      };
+  };
+}

@@ -1,0 +1,116 @@
+{
+  den,
+  lib,
+  inputs,
+  mercer,
+  ...
+}:
+{
+  den.ctx.host.includes = [ mercer.neovim ];
+
+  mercer.neovim = {
+    nixos =
+      { pkgs, config, ... }:
+      {
+        imports = [
+          inputs.nvf.nixosModules.default
+
+          ./_dashboard.nix
+          ./_notes.nix
+          ./_options.nix
+          ./_tabline.nix
+          ./_terminal.nix
+          ./_theme.nix
+
+        ];
+
+        environment.systemPackages = with pkgs; [
+          fd
+          hunspell
+          hunspellDicts.en_US
+          neovim
+          tree-sitter
+          ripgrep
+        ];
+
+        programs.nvf = {
+          enable = true;
+          settings = {
+            vim = {
+              autopairs = {
+                nvim-autopairs.enable = true;
+              };
+
+              autocomplete = {
+                nvim-cmp = {
+                  enable = true;
+                  sources = {
+                    nvim_lsp = "[LSP]";
+                    path = "[Path]";
+                    buffer = "[Buffer]";
+                    treesitter = "[Treesitter]";
+                  };
+                };
+              };
+
+              binds = {
+                whichKey.enable = true;
+              };
+
+              clipboard = {
+                enable = true;
+                registers = "unnamedplus";
+              };
+
+              comments.comment-nvim = {
+                enable = true;
+              };
+
+              git.gitsigns.enable = true;
+
+              formatter = {
+                conform-nvim.enable = true;
+              };
+
+              languages = {
+                css.enable = true;
+                html.enable = true;
+                markdown.enable = true;
+                nix.enable = true;
+                python.enable = true;
+              };
+
+              lsp = {
+                enable = true;
+                formatOnSave = true;
+              };
+
+              searchCase = "smart";
+
+              statusline.lualine.enable = true;
+
+              telescope = {
+                enable = true;
+              };
+
+              treesitter = {
+                enable = true;
+                indent.enable = false;
+              };
+
+              ui = {
+                noice.enable = true;
+              };
+
+              undoFile.enable = true;
+
+              utility = {
+                yazi-nvim.enable = true;
+              };
+            };
+          };
+        };
+
+      };
+  };
+}
