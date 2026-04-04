@@ -15,6 +15,7 @@
           kitty
           niri
           rmpc
+          yt-audio
         ];
       };
 
@@ -23,6 +24,7 @@
       {
 
         networking = {
+          hostId = "6ec5787a";
           interfaces.enp8s0.ipv4.addresses = [
             {
               address = "192.168.50.2";
