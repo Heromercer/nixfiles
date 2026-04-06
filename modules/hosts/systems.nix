@@ -9,6 +9,7 @@
       <mercer/fastfetch>
       <mercer/firefox>
       <mercer/gaming>
+      <mercer/hardware>
       <mercer/imv>
       <mercer/mpv>
       <mercer/services/mysql>
