@@ -10,6 +10,7 @@
       { user, ... }:
       {
         includes = with mercer; [
+          arr
           desktop
           dms
           kitty

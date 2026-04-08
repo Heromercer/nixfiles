@@ -33,8 +33,8 @@
       url = "github:adriankarlen/textfox";
     };
 
-    nixarr = {
-      url = "github:rasmus-kirk/nixarr";
+    nixflix = {
+      url = "github:kiriwalawren/nixflix";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
