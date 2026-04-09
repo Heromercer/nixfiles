@@ -18,6 +18,7 @@
           gnome.gnome-keyring = {
             enable = true;
           };
+          xserver.enable = false;
         };
         environment.systemPackages = with pkgs; [
           adw-gtk3
