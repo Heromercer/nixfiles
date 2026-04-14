@@ -15,6 +15,7 @@
         environment.systemPackages = with pkgs; [
           faugus-launcher
           mangohud
+          melonDS
           prismlauncher
           protonup-qt
           rpcs3
