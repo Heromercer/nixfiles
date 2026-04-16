@@ -14,6 +14,7 @@
       <mercer/mpv>
       <mercer/services/mysql>
       <mercer/services/udisks>
+      <mercer/services/vpn>
       <mercer/services/zfs>
       <mercer/xdg>
     ];
