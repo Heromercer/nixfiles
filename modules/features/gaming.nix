@@ -14,7 +14,6 @@
 
         environment.systemPackages = with pkgs; [
           desmume
-          faugus-launcher
           mangohud
           prismlauncher
           protonup-qt
