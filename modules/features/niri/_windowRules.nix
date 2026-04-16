@@ -2,23 +2,23 @@
   programs.niri.settings.window-rules = [
     {
       matches = [
-        {is-active = false;}
+        { is-active = false; }
       ];
       excludes = [
-        {app-id = "firefox";}
+        { app-id = "vivaldi"; }
       ];
       opacity = 0.9;
     }
 
     {
       matches = [
-        {app-id = "kitty";}
+        { app-id = "kitty"; }
       ];
       draw-border-with-background = false;
     }
 
     {
-      matches = [];
+      matches = [ ];
       geometry-corner-radius = {
         top-left = 12.0;
         top-right = 12.0;
@@ -30,7 +30,7 @@
 
     {
       matches = [
-        {app-id = "^org\\.gnome\\.";}
+        { app-id = "^org\\.gnome\\."; }
       ];
       draw-border-with-background = false;
       geometry-corner-radius = {
@@ -44,15 +44,15 @@
 
     {
       matches = [
-        {app-id = "org.quickshell$";}
+        { app-id = "org.quickshell$"; }
       ];
       open-floating = true;
     }
 
     {
       matches = [
-        {app-id = "firefox";}
-        {app-id = "vesktop";}
+        { app-id = "vivaldi"; }
+        { app-id = "vesktop"; }
       ];
       open-maximized = true;
       open-on-output = "DP-3";
@@ -60,7 +60,7 @@
 
     {
       matches = [
-        {title = "Steam";}
+        { title = "Steam"; }
       ];
       open-maximized = true;
       open-on-output = "DP-1";
@@ -68,10 +68,10 @@
 
     {
       matches = [
-        {app-id = "steam";}
+        { app-id = "steam"; }
       ];
       excludes = [
-        {title = "Steam";}
+        { title = "Steam"; }
       ];
       open-floating = true;
       open-on-output = "DP-1";

@@ -12,7 +12,7 @@
         action = toggle-overview;
         repeat = false;
       };
-      "Mod+B".action = spawn "firefox";
+      "Mod+B".action = spawn "vivaldi";
       "Mod+E".action.spawn-sh = "kitty -e fish -c 'y; exec fish'";
       "Mod+SHift+M".action.spawn-sh = "kitty -e rmpc";
 

@@ -7,7 +7,6 @@
       <mercer/bluetooth>
       <mercer/discord>
       <mercer/fastfetch>
-      <mercer/firefox>
       <mercer/gaming>
       <mercer/hardware>
       <mercer/imv>
