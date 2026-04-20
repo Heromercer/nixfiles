@@ -81,6 +81,7 @@
             calibre
             caligula
             clang
+            comma
             coreutils
             dconf
             direnv
