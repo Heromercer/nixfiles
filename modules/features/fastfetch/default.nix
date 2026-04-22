@@ -6,8 +6,8 @@
         settings = {
           logo = {
             type = "builtin";
-            height = 15;
-            width = 15;
+            height = 20;
+            width = 10;
             padding = {
               top = 3;
               left = 3;
@@ -30,7 +30,7 @@
             }
             {
               type = "title";
-              key = "  │{#red} 󰀄 user    {#keys}│";
+              key = "  │{#red} 󰀄  user   {#keys}│";
               format = "{user-name}";
             }
             {
