@@ -11,6 +11,7 @@
       <mercer/hardware>
       <mercer/imv>
       <mercer/mpv>
+      <mercer/plymouth>
       <mercer/services/mysql>
       <mercer/services/udisks>
       <mercer/services/vpn>
