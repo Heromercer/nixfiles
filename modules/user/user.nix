@@ -6,10 +6,5 @@
       den.provides.primary-user
       (den.provides.user-shell "fish")
     ];
-    homeManager =
-      { pkgs, ... }:
-      {
-        home.packages = [ pkgs.cowsay ];
-      };
   };
 }

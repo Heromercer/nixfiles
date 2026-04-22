@@ -29,10 +29,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    textfox = {
-      url = "github:adriankarlen/textfox";
-    };
-
     nixflix = {
       url = "github:kiriwalawren/nixflix";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
