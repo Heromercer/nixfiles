@@ -21,7 +21,6 @@
     nixos =
       { pkgs, inputs', ... }:
       {
-
         networking = {
           hostId = "6ec5787a";
           interfaces.enp8s0.ipv4.addresses = [
@@ -95,6 +94,7 @@
             nodejs
             python315
             unzip
+            via
             vivaldi
             wayland-protocols
             wayland-utils
