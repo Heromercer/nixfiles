@@ -4,7 +4,7 @@
       { pkgs, ... }:
       {
         home.packages = [
-          (pkgs.writeShellScriptBin "yt-audio" ''
+          (pkgs.writeShellScriptBin "yta" ''
             exec ${pkgs.yt-dlp}/bin/yt-dlp \
               --format "ba" \
               --verbose \
