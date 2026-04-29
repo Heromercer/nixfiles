@@ -122,8 +122,8 @@
 
       "Mod+W".action = toggle-column-tabbed-display;
 
-      "Print".action = spawn "dms" "screenshot" "full";
-      "Ctrl+Print".action = spawn "dms" "screenshot";
+      "Ctrl+Home".action = spawn "dms" "screenshot" "full";
+      "Ctrl+Shift+Home".action = spawn "dms" "screenshot";
     };
   };
 }
