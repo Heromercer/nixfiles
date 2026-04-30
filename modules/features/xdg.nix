@@ -12,9 +12,14 @@
               pkgs.xdg-desktop-portal-gnome
             ];
             config = {
-              common.default = [
-                "gtk"
-              ];
+              niri = {
+                default = [
+                  "gtk"
+                ];
+                "org.freedesktop.impl.portal.ScreenCast" = [
+                  "gnome"
+                ];
+              };
             };
           };
         };
