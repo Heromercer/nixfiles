@@ -7,11 +7,15 @@
         xdg = {
           portal = {
             enable = true;
-            xdgOpenUsePortal = true;
             extraPortals = [
               pkgs.xdg-desktop-portal-gtk
               pkgs.xdg-desktop-portal-gnome
             ];
+            config = {
+              common.default = [
+                "gtk"
+              ];
+            };
           };
         };
       };
@@ -22,6 +26,15 @@
         userDirs = {
           enable = true;
           createDirectories = true;
+        };
+        mimeApps = {
+          enable = true;
+          defaultApplications = {
+            "inode/directory" = [ "yazi.desktop" ];
+          };
+          associations.removed = {
+            "inode/directory" = [ "easytag.desktop" ];
+          };
         };
       };
     };
