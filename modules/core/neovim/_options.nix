@@ -7,5 +7,6 @@
     shiftround = true;
     autoindent = true;
     smartindent = true;
+    conceallevel = 2;
   };
 }
