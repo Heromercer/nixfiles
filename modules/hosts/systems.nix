@@ -31,5 +31,9 @@
       <mercer/services/udisks>
       <mercer/xdg>
     ];
+    server.includes = [
+      <mercer.services.navidrome>
+      <mercer.services.tailscale>
+    ];
   };
 }
