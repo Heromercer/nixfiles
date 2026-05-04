@@ -15,8 +15,6 @@
           kitty
           niri
           rmpc
-
-          services._.headscale
         ];
       };
 
