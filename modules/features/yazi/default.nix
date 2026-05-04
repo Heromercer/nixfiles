@@ -15,6 +15,7 @@
           enable = true;
           plugins = {
             chmod = pkgs.yaziPlugins.chmod;
+            compress = pkgs.yaziPlugins.compress;
           };
           enableFishIntegration = true;
           settings.mgr = {
@@ -63,6 +64,15 @@
                 on = [
                   "c"
                   "m"
+                ];
+              }
+
+              {
+                run = "plugin compress";
+                on = [
+                  "c"
+                  "a"
+                  "a"
                 ];
               }
 
