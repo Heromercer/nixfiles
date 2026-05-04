@@ -20,7 +20,7 @@
               --embed-subs \
               --check-formats \
               --concurrent-fragments 5 \
-              --output "%(uploader)s - %(upload_date)s - %(title)s [%(id)s].%(ext)s" \
+              --output "%(uploader)s - %(title)s.%(ext)s" \
               --merge-output-format "mkv" \
               --throttled-rate 100K \
               --max-filesize 300m \
