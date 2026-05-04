@@ -18,6 +18,7 @@
       <mercer/services/vpn>
       <mercer/services/zfs>
       <mercer/xdg>
+      <mercer/zathura>
     ];
     laptop.includes = [
       <mercer/appimage>
