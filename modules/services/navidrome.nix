@@ -7,7 +7,7 @@
           enable = true;
           settings = {
             Address = "0.0.0.0";
-            MusicFolder = "/mnt/archive/disk/Music/";
+            MusicFolder = "/home/alec/Music/";
           };
         };
         networking.firewall.allowedTCPPorts = [ 4533 ];
