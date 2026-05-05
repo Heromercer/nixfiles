@@ -12,7 +12,7 @@
       networking = {
         interfaces.eno1.ipv4.addresses = [
           {
-            address = "192.168.50.3";
+            address = "192.168.50.4";
             prefixLength = 24;
           }
         ];
