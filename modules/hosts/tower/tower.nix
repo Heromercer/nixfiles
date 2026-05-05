@@ -8,15 +8,21 @@
           server
         ];
       };
-    nixos = {
-      virtualisation.docker = {
-        enable = true;
-      };
-      users.users.alec = {
-        extraGroups = [ "docker" ];
-      };
+    nixos =
+      { pkgs, ... }:
+      {
+        virtualisation.docker = {
+          enable = true;
+        };
+        users.users.alec = {
+          extraGroups = [ "docker" ];
+        };
 
-      imports = [ ./_tower-hardware.nix ];
-    };
+        environment.systemPackages = with pkgs; [
+          vivaldi
+        ];
+
+        imports = [ ./_tower-hardware.nix ];
+      };
   };
 }

@@ -35,6 +35,7 @@
     ];
     server.includes = [
       <mercer/services/navidrome>
+      <mercer/services/tailscale>
     ];
   };
 }
