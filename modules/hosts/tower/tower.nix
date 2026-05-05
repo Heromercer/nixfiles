@@ -9,17 +9,6 @@
         ];
       };
     nixos = {
-      networking = {
-        interfaces.eno1.ipv4.addresses = [
-          {
-            address = "192.168.50.4";
-            prefixLength = 24;
-          }
-        ];
-        defaultGateway = "192.168.50.1";
-        nameservers = [ "8.8.8.8" ];
-      };
-
       virtualisation.docker = {
         enable = true;
       };
