@@ -19,6 +19,14 @@
         defaultGateway = "192.168.50.1";
         nameservers = [ "8.8.8.8" ];
       };
+
+      virtualisation.docker = {
+        enable = true;
+      };
+      users.users.alec = {
+        extraGroups = [ "docker" ];
+      };
+
       imports = [ ./_tower-hardware.nix ];
     };
   };
