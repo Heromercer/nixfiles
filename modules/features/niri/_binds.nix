@@ -14,6 +14,7 @@
       };
       "Mod+B".action = spawn "vivaldi";
       "Mod+E".action.spawn-sh = "kitty -e fish -c 'y; exec fish'";
+      "Mod+Shift+E".action.spawn-sh = "kitty -e fish -c 'nvim; exec fish'";
       "Mod+SHift+M".action.spawn-sh = "kitty -e rmpc";
 
       "Mod+D".action = spawn "dms" "ipc" "call" "spotlight" "toggle";

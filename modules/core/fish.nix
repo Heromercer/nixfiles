@@ -23,7 +23,7 @@
             nhsu = "nh os switch -u";
             nhc = "nh clean all --keep 10 --ask";
             check = "sudo nix flake check";
-            nf = "cd .nixfiles";
+            nf = "cd .nixfiles && nvim";
           };
 
           functions = {
