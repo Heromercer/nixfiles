@@ -26,7 +26,6 @@
       <mercer/bluetooth>
       <mercer/discord>
       <mercer/fastfetch>
-      <mercer/firefox>
       <mercer/imv>
       <mercer/mpv>
       <mercer/services/power-mngmt>

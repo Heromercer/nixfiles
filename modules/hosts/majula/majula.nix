@@ -39,6 +39,7 @@
           nodejs
           python315
           unzip
+          vivaldi
           wayland-protocols
           wayland-utils
           wget
