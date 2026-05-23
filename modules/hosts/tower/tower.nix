@@ -19,7 +19,6 @@
         };
 
         environment.systemPackages = with pkgs; [
-          vivaldi
         ];
 
         imports = [ ./_tower-hardware.nix ];

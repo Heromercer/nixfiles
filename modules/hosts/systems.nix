@@ -33,6 +33,7 @@
       <mercer/xdg>
     ];
     server.includes = [
+      <mercer/services/mcServer>
       <mercer/services/navidrome>
       <mercer/services/tailscale>
     ];
