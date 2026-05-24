@@ -11,11 +11,20 @@
           enable = true;
           eula = true;
           openFirewall = true;
-          servers.vanilla = {
-            enable = true;
-            jvmOpts = "-Xmx4G -Xms2G";
+          servers = {
+            vanillaRealm = {
+              enable = true;
+              jvmOpts = "-Xmx8G -Xms4G";
+              operators = {
+                Big_Mercer = "c482adc6-4d78-494a-bd2b-85f8b36f86ef";
+              };
+              serverProperties = {
+                level-name = "realm";
+                level-seed = "23487324737642987198237892173232323121dsa";
+              };
 
-            package = pkgs.minecraftServers.vanilla-1_20;
+              package = pkgs.minecraftServers.vanilla;
+            };
           };
         };
       };
