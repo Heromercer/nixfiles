@@ -8,10 +8,10 @@
         nixpkgs.overlays = [ inputs.flux.overlays.default ];
 
         flux = {
-          enable = true;
+          enable = false;
           servers = {
-            realm = {
-              package = pkgs.mkMinecraftServer {
+            cobblemon = {
+              package = (pkgs.mkMinecraftServer.override { jre = pkgs.javaPackages.compiler.openjdk25; }) {
                 name = "realm";
                 src = ./mcman;
                 hash = "sha256-j9iDHXyr9DtKDatAPo9zUGr8TQYne5U13uYVis+tPSs=";
