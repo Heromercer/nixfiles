@@ -12,7 +12,6 @@
       <mercer/imv>
       <mercer/mpv>
       <mercer/plymouth>
-      <mercer/services/flux>
       <mercer/services/mysql>
       <mercer/services/tailscale>
       <mercer/services/udisks>
