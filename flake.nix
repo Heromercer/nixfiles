@@ -61,8 +61,9 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
-    nix-minecraft = {
-      url = "github:Infinidoge/nix-minecraft";
+    flux = {
+      url = "github:IogaMaster/flux";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };
 
