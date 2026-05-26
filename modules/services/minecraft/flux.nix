@@ -10,11 +10,11 @@
         flux = {
           enable = false;
           servers = {
-            cobblemon = {
+            realm2 = {
               package = (pkgs.mkMinecraftServer.override { jre = pkgs.javaPackages.compiler.openjdk25; }) {
-                name = "realm";
-                src = ./mcman;
-                hash = "sha256-j9iDHXyr9DtKDatAPo9zUGr8TQYne5U13uYVis+tPSs=";
+                name = "";
+                # src = ;
+                hash = "";
               };
             };
           };
