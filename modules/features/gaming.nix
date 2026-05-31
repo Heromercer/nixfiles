@@ -22,11 +22,11 @@
           wine
           (wine.override { wineBuild = "wine64"; })
           wine64
-          wineWowPackages.stable
-          wineWowPackages.waylandFull
+          wineWow64Packages.stable
+          wineWow64Packages.waylandFull
           winetricks
           xdelta
-          xorg.xrandr
+          xrandr
         ];
       };
   };

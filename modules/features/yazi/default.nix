@@ -21,6 +21,7 @@
           settings.mgr = {
             show_hidden = true;
           };
+          shellWrapperName = "y";
           keymap = {
             mgr.prepend_keymap = [
               {

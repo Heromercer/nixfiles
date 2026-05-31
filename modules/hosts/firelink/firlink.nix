@@ -35,7 +35,10 @@
 
         boot = {
           supportedFilesystems = [ "zfs" ];
-          zfs.extraPools = [ "games" ];
+          zfs = {
+            extraPools = [ "games" ];
+            forceImportRoot = "false";
+          };
         };
 
         fileSystems = {

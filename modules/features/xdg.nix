@@ -13,9 +13,6 @@
             ];
             config = {
               niri = {
-                default = [
-                  "gtk"
-                ];
                 "org.freedesktop.impl.portal.ScreenCast" = [
                   "gnome"
                 ];
@@ -31,6 +28,7 @@
         userDirs = {
           enable = true;
           createDirectories = true;
+          setSessionVariables = false;
         };
         mimeApps = {
           enable = true;
