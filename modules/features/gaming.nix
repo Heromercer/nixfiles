@@ -15,6 +15,7 @@
         environment.systemPackages = with pkgs; [
           desmume
           mangohud
+          mgba
           prismlauncher
           protonup-qt
           rpcs3
