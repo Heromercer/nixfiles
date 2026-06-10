@@ -76,5 +76,13 @@
       open-floating = true;
       open-on-output = "DP-1";
     }
+
+    {
+      matches = [
+        { app-id = "steam_app_*"; }
+      ];
+      open-fullscreen = true;
+      open-on-output = "DP-1";
+    }
   ];
 }
