@@ -92,6 +92,14 @@
               };
               scale = 1;
             };
+
+            "HDMI-A-1" = {
+              mode = {
+                width = 3840;
+                height = 2160;
+                refresh = 30.000;
+              };
+            };
           };
 
           cursor = {
