@@ -1,24 +1,23 @@
-{ den, lib, ... }:
 {
   mercer.gaming = {
     nixos =
-      { pkgs, ... }:
+      { pkgs, lib, ... }:
       {
         programs.steam = {
           enable = true;
           gamescopeSession.enable = true;
           protontricks.enable = true;
         };
-
         programs.gamemode.enable = true;
-
         environment.systemPackages = with pkgs; [
           desmume
           mangohud
           mgba
           prismlauncher
           protonup-qt
-          rpcs3
+          (rpcs3.overrideAttrs (prev: {
+            cmakeFlags = prev.cmakeFlags ++ [ (lib.cmakeBool "BUILD_SHARED_LIBS" false) ];
+          }))
           shadps4
           wine
           (wine.override { wineBuild = "wine64"; })
