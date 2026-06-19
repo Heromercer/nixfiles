@@ -49,14 +49,16 @@
           enableCalendarEvents = true;
 
           plugins = {
-            dockerManager.enable = true;
             amdGpuMonitor.enable = true;
+            dockerManager.enable = true;
+            screenRecorder.enable = true;
           };
         };
 
         home.packages = with pkgs; [
           cava
           cliphist
+          gpu-screen-recorder
           matugen
           wl-clipboard
         ];

@@ -28,6 +28,7 @@
       "Mod+Shift+C".action = spawn "dms" "ipc" "call" "control-center" "toggle";
       "Mod+Shift+W".action = spawn "dms" "ipc" "call" "dankdash" "wallpaper";
       "Mod+Shift+N".action = spawn "dms" "ipc" "call" "night" "toggle";
+      "Mod+Alt+R".action = spawn "dms" "ipc" "call" "screenRecorder" "toggleRecording";
 
       "Mod+H".action = focus-column-left;
       "Mod+L".action = focus-column-right;
