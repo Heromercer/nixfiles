@@ -7,6 +7,9 @@
           enable = true;
           gamescopeSession.enable = true;
           protontricks.enable = true;
+          extraPackages = [
+            pkgs.hidapi # for steam controller
+          ];
         };
         programs.gamemode.enable = true;
         environment.systemPackages = with pkgs; [
