@@ -1,12 +1,19 @@
+{ inputs, ... }:
 {
   mercer.gaming = {
     nixos =
-      { pkgs, lib, ... }:
       {
+        pkgs,
+        lib,
+        ...
+      }:
+      {
+        nixpkgs.overlays = [ inputs.millennium.overlays.default ];
         programs.steam = {
           enable = true;
           gamescopeSession.enable = true;
           protontricks.enable = true;
+          package = pkgs.millennium-steam;
           extraPackages = [
             pkgs.hidapi # for steam controller
           ];

@@ -65,6 +65,10 @@
       url = "github:IogaMaster/flux";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+
+    millennium = {
+      url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
+    };
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
