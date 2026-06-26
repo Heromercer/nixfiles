@@ -22,7 +22,7 @@
         };
       };
 
-    homeManager = {
+    homeManager = { pkgs, ... }: {
       xdg = {
         enable = true;
         userDirs = {
@@ -38,6 +38,23 @@
           associations.removed = {
             "inode/directory" = [ "easytag.desktop" ];
           };
+        };
+        desktopEntries.yazi = {
+          name = "Yazi";
+          icon = "yazi";
+          genericName = "Terminal File Manager";
+          comment = "Blazing fast terminal file manager written in Rust, based on async I/O";
+          terminal = false;
+          exec = "${lib.getExe pkgs.kitty} --class=kitty.yazi -e ${pkgs.yazi}/bin/yazi %u";
+          type = "Application";
+          mimeType = [ "inode/directory" ];
+          categories = [
+            "Utility"
+            "Core"
+            "System"
+            "FileTools"
+            "FileManager"
+          ];
         };
       };
     };
