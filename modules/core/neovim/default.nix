@@ -112,6 +112,11 @@
                     backend = "kitty";
                   };
                 };
+                motion = {
+                  flash-nvim = {
+                    enable = true;
+                  };
+                };
               };
             };
           };
