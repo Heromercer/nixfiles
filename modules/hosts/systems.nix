@@ -13,6 +13,7 @@
       <mercer/mpv>
       <mercer/plymouth>
       <mercer/services/mysql>
+      <mercer/services/printing>
       <mercer/services/tailscale>
       <mercer/services/udisks>
       <mercer/services/vpn>
