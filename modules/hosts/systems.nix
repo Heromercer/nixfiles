@@ -12,7 +12,6 @@
       <mercer/imv>
       <mercer/mpv>
       <mercer/plymouth>
-      <mercer/secrets>
       <mercer/services/mysql>
       <mercer/services/printing>
       <mercer/services/tailscale>
@@ -35,7 +34,6 @@
       <mercer/xdg>
     ];
     server.includes = [
-      <mercer/secrets>
       <mercer/services/navidrome>
       <mercer/services/tailscale>
     ];
