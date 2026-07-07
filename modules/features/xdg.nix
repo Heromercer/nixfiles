@@ -34,11 +34,15 @@
           enable = true;
           defaultApplications = {
             "inode/directory" = [ "yazi.desktop" ];
+            "x-scheme-handler/http" = "vivaldi-stable.desktop";
+            "x-scheme-handler/https" = "vivaldi-stable.desktop";
+            "text/html" = "vivaldi-stable.desktop";
           };
           associations.removed = {
             "inode/directory" = [ "easytag.desktop" ];
           };
         };
+
         desktopEntries.yazi = {
           name = "Yazi";
           icon = "yazi";
