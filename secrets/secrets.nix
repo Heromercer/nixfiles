@@ -5,6 +5,5 @@ in
 {
   "cloudflare-api-key.age".publicKeys = [
     tower
-    firelink
   ];
 }
