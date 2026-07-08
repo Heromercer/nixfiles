@@ -37,7 +37,6 @@
     server.includes = [
       <mercer/secrets>
       <mercer/services/navidrome>
-      <mercer/services/pangolin>
       <mercer/services/tailscale>
     ];
   };
