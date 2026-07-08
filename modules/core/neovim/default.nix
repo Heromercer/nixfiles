@@ -78,6 +78,7 @@
                 markdown.enable = true;
                 nix.enable = true;
                 python.enable = true;
+                yaml.enable = true;
               };
 
               lsp = {
