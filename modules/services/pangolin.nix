@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ config, mercer, ... }: {
   mercer.services.provides.pangolin = {
     nixos = {
       services.pangolin = {
@@ -16,5 +16,6 @@
         environmentFile = config.sops.secrets.pangolin-secret.path;
       };
     };
+    includes = [ mercer.secrets ];
   };
 }
