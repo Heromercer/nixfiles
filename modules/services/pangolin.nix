@@ -13,6 +13,7 @@
         letsEncryptEmail = "heromercer@gmail.com";
         openFirewall = true;
         dnsProvider = "cloudflare";
+        environmentFile = "/etc/nixos/secrets/pangolin.env";
       };
     };
   };
