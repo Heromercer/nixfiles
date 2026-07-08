@@ -3,11 +3,13 @@ keys:
     - &alec age1l7k7pxjcgsv49zkpmn2xk7w96ezq5azz5yd94ccm3qgz9ex2rsqq4gtwxp
   - &hosts:
     - &firelink age1k93w2yghjxa9ytfd9cvw8fq0d0xuyltusjnx4qxm88ulckwcvgyq6d6g7a
+    - &tower age18tta7nwrdax003ldmay4kyuek6c0qcxpmtezwfvdnpmqkvxvz52qkk9gsm
 creation_rules:
   - path_regex: secrets.yaml$
     key_groups:
       - age:
         - *alec
         - *firelink
+        - *tower
 
 
