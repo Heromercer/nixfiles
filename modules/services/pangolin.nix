@@ -1,4 +1,4 @@
-{
+{ config, ... }: {
   mercer.services.provides.pangolin = {
     nixos = {
       services.pangolin = {
@@ -13,7 +13,7 @@
         letsEncryptEmail = "heromercer@gmail.com";
         openFirewall = true;
         dnsProvider = "cloudflare";
-        environmentFile = "/etc/nixos/secrets/pangolin.env";
+        environmentFile = config.sops.secrets.pangolin-secret.path;
       };
     };
   };
