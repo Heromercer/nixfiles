@@ -1,6 +1,6 @@
 { config, mercer, ... }: {
   mercer.services.provides.pangolin = {
-    nixos = {
+    nixos = { config, ... }: {
       services.pangolin = {
         enable = true;
         settings = {
