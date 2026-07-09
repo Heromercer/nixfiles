@@ -1,4 +1,4 @@
-{ config, mercer, ... }: {
+{
   mercer.services.provides.pangolin = {
     nixos = { config, ... }: {
       services.pangolin = {
@@ -16,6 +16,5 @@
         };
       };
     };
-    includes = [ mercer.secrets ];
   };
 }
