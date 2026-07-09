@@ -36,6 +36,7 @@
     ];
     server.includes = [
       <mercer/secrets>
+      <mercer/services/homepage>
       <mercer/services/navidrome>
       <mercer/services/tailscale>
     ];
