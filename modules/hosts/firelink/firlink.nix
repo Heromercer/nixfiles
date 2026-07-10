@@ -96,6 +96,7 @@
             nix-init
             nodejs
             python315
+            smartmontools # drive health tool
             unzip
             vivaldi
             wayland-protocols
