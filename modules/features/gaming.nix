@@ -21,6 +21,7 @@
         programs.gamemode.enable = true;
         environment.systemPackages = with pkgs; [
           desmume
+          dusklight # twilight princess emulator tool
           mangohud
           mgba
           prismlauncher
