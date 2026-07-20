@@ -6,7 +6,7 @@
   ...
 }:
 {
-  den.ctx.host.includes = [ mercer.nix ];
+  den.schema.host.includes = [ mercer.nix ];
 
   mercer.nix = {
     nixos = {

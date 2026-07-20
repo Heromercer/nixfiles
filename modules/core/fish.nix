@@ -5,7 +5,7 @@
   ...
 }:
 {
-  den.ctx.user.includes = [ mercer.fish ];
+  den.schema.user.includes = [ mercer.fish ];
 
   mercer.fish = {
     homeManager =

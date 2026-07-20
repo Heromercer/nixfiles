@@ -5,7 +5,7 @@
   ...
 }:
 {
-  den.ctx.user.includes = [ mercer.nix-helper ];
+  den.schema.user.includes = [ mercer.nix-helper ];
 
   mercer.nix-helper = {
     homeManager = {

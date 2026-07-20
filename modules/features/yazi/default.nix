@@ -5,7 +5,7 @@
   ...
 }:
 {
-  den.ctx.user.includes = [ mercer.yazi ];
+  den.schema.user.includes = [ mercer.yazi ];
 
   mercer.yazi = {
     homeManager =

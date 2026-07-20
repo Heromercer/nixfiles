@@ -5,7 +5,7 @@
   ...
 }:
 {
-  den.ctx = {
+  den.schema = {
     host.includes = [ mercer.git ];
     user.includes = [ mercer.git ];
   };

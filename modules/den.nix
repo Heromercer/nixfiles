@@ -16,9 +16,9 @@
 
   den.schema.user.classes = lib.mkDefault [ "homeManager" ];
 
-  den.ctx.user.includes = [ den._.mutual-provider ];
+  den.schema.user.includes = [ den._.mutual-provider ];
 
-  den.ctx.hm-host.nixos.home-manager.useGlobalPkgs = true;
-  den.ctx.hm-host.nixos.home-manager.useUserPackages = true;
-  den.ctx.hm-host.nixos.home-manager.backupFileExtension = "backup";
+  den.schema.hm-host.nixos.home-manager.useGlobalPkgs = true;
+  den.schema.hm-host.nixos.home-manager.useUserPackages = true;
+  den.schema.hm-host.nixos.home-manager.backupFileExtension = "backup";
 }

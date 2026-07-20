@@ -1,6 +1,7 @@
 { mercer, ... }:
 {
-  den.ctx.host.includes = [ mercer.services._.ssh ];
+  den.schema.host.includes = [ mercer.services._.ssh ];
+
   mercer.services.provides.ssh = {
     nixos = {
       services.openssh = {

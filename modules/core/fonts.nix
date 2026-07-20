@@ -5,7 +5,7 @@
   ...
 }:
 {
-  den.ctx.host.includes = [ mercer.fonts ];
+  den.schema.host.includes = [ mercer.fonts ];
 
   mercer.fonts = {
     nixos =
