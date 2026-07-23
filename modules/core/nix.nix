@@ -11,7 +11,10 @@
   mercer.nix = {
     nixos = {
       imports = [ inputs.nix-index-database.nixosModules.default ];
-      programs.nix-index-database.comma.enable = true;
+      programs = {
+        nix-index-database.comma.enable = true;
+        nix-ld.enable = true;
+      };
       nixpkgs.config = {
         allowUnfree = true;
         allowBroken = false;
