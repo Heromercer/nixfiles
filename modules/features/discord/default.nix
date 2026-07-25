@@ -21,6 +21,10 @@
           enabledThemes = [
             "tokyo-night.css"
           ];
+
+          plugins = {
+            webScreenShareFixes.enable = true;
+          };
         };
       };
     };
