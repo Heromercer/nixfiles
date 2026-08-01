@@ -1,6 +1,4 @@
 {
-  den,
-  lib,
   mercer,
   ...
 }:
@@ -16,6 +14,7 @@
           plugins = {
             chmod = pkgs.yaziPlugins.chmod;
             compress = pkgs.yaziPlugins.compress;
+            full-border = pkgs.yaziPlugins.full-border;
           };
           enableFishIntegration = true;
           settings.mgr = {
