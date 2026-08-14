@@ -1,6 +1,4 @@
 {
-  den,
-  lib,
   mercer,
   ...
 }:
@@ -27,6 +25,7 @@
           };
         };
         home.packages = with pkgs; [
+          bat
           fishPlugins.tide
         ];
       };
