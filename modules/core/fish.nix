@@ -24,8 +24,15 @@
             nf = "cd .nixfiles && nvim";
           };
         };
+
+        programs.bat = {
+          enable = true;
+          config = {
+            theme = "Catppuccin Macchiato";
+          };
+        };
+
         home.packages = with pkgs; [
-          bat
           fishPlugins.tide
         ];
       };
