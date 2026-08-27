@@ -1,4 +1,3 @@
-{ den, lib, ... }:
 {
   mercer.xdg = {
     nixos =
@@ -49,7 +48,7 @@
           genericName = "Terminal File Manager";
           comment = "Blazing fast terminal file manager written in Rust, based on async I/O";
           terminal = false;
-          exec = "${lib.getExe pkgs.kitty} --class=kitty.yazi -e ${pkgs.yazi}/bin/yazi %u";
+          exec = "kitty -e yazi %f";
           type = "Application";
           mimeType = [ "inode/directory" ];
           categories = [
