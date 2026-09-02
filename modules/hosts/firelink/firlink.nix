@@ -14,6 +14,7 @@
           dms
           kitty
           niri
+          #noctalia
           rmpc
         ];
       };

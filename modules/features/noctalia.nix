@@ -1,29 +1,27 @@
-{ __findFile }:
+{ __findFile, inputs, ... }:
 {
   mercer.noctalia = {
     includes = [ <mercer/services/power-mngmt> ];
 
-    nixos =
-      { inputs', ... }:
-      {
-        imports = [
-          inputs'.noctalia.nixosModules.default
-          inputs'.noctalia-greeter.nixosModules.default
-        ];
+    nixos = {
+      imports = [
+        inputs.noctalia.nixosModules.default
+        inputs.noctalia-greeter.nixosModules.default
+      ];
 
-        programs.noctalia = {
-          enable = true;
+      programs.noctalia = {
+        enable = true;
 
-          recommendedServices.enable = true;
-        };
+        recommendedServices.enable = true;
+      };
 
-        programs.noctalia-greeter = {
-          enable = true;
-          greeter-args = "";
-          settings = {
+      programs.noctalia-greeter = {
+        enable = true;
+        greeter-args = "";
+        settings = {
 
-          };
         };
       };
+    };
   };
 }
