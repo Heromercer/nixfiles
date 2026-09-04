@@ -4,9 +4,18 @@
     nixpkgs.url = "nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
 
+    home-manager = {
+      url = "github:nix-community/home-manager/release-26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nvf = {
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nix-doom-emacs-unstraightened = {
+      url = "github:marienz/nix-doom-emacs-unstraightened";
     };
 
     nixcord = {
@@ -39,11 +48,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    home-manager = {
-      url = "github:nix-community/home-manager/release-26.05";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nixflix = {
       url = "github:kiriwalawren/nixflix";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
@@ -73,11 +77,6 @@
 
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
-
-    flux = {
-      url = "github:IogaMaster/flux";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 

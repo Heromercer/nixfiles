@@ -6,6 +6,7 @@
       <mercer/audio>
       <mercer/bluetooth>
       <mercer/discord>
+      <mercer/emacs>
       <mercer/fastfetch>
       <mercer/gaming>
       <mercer/hardware>
