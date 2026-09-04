@@ -31,6 +31,7 @@
             nerd-fonts.meslo-lg
             openmoji-color
             twemoji-color-font
+            jetbrains-mono
           ];
         };
       };
