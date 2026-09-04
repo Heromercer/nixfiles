@@ -9,12 +9,13 @@
   den.schema.host.includes = [ mercer.nix ];
 
   mercer.nix = {
-    nixos = {
+    nixos = { pkgs, ... }: {
       imports = [ inputs.nix-index-database.nixosModules.default ];
       programs = {
         nix-index-database.comma.enable = true;
         nix-ld.enable = true;
       };
+
       nixpkgs.config = {
         allowUnfree = true;
         allowBroken = false;
@@ -29,6 +30,8 @@
           ];
         };
       };
+
+      environment.systemPackages = [ pkgs.nixfmt ];
     };
   };
 }

@@ -27,14 +27,23 @@
        window-select
 
        :editor
-       evil
+       (evil +everywhere)
+       file-templates
+       snippets
+       (format +onsave)
 
        :emacs
+       dired
+       electric
        undo
+       vc
 
        :term
        eshell
        vterm
+
+       :checkers
+       syntax
 
        :os
        (:if (featurep :system 'macos) macos)
@@ -43,9 +52,14 @@
        :lang
        emacs-lisp
        (nix +lsp)
+       org
+       sh
 
        :tools
        (lsp +eglot)
+       lookup
+       magit
+       pdf
 
        :config
        (default +bindings +smartparens))
