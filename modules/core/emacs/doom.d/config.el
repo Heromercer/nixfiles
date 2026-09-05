@@ -6,6 +6,27 @@
 (setq org-roam-directory "~/Documents/org/")
 (setq confirm-kill-emacs nil)
 
+(after! org-roam
+  (setq org-roam-capture-templates
+        '(
+          ("d" "default" plain
+           "%?"
+           :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+           :unnarrowed t)
+
+          ("l" "programming language" plain
+           "* Characteristics\n\n- Family: %?\n- Inspired by: \n\n* Reference:\n\n"
+           :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+           :unnarrowed t)
+
+          ("b" "book notes" plain
+           (file "~/Documents/org/templates/bookTemplate.org")
+           :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+           :unnarrowed t)
+          )
+        )
+  )
+
 (after! apheleia
   (setf (alist-get 'nixfmt apheleia-formatters) '("nixfmt"))
   (setf (alist-get 'nix-mode apheleia-mode-alist) 'nixfmt)
