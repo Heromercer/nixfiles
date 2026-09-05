@@ -4,17 +4,23 @@
        :ui
        doom
        dashboard
+       hl-todo
        modeline
        nav-flash
        ophints
        (popup +defaults)
+       (vc-gutter +pretty)
+       vi-tilde-fringe
+       workspaces
        window-select
 
        :editor
        (evil +everywhere)
        file-templates
+       fold
        snippets
        (format +onsave)
+       (whitespace +guess +trim)
 
        :emacs
        dired
@@ -28,9 +34,13 @@
 
        :checkers
        syntax
+       (spell +flyspell)
+       grammar
 
        :completion
-       company
+       ;;company
+       (corfu +orderless)
+       vertico
 
        :os
        (:if (featurep :system 'macos) macos)
