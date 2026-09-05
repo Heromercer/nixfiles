@@ -89,7 +89,7 @@
       matches = [
         { app-id = "emacs"; }
       ];
-      open-fullscreen = true;
+      open-maximized = true;
     }
 
   ];
