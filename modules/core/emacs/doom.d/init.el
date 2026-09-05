@@ -49,7 +49,7 @@
        :lang
        emacs-lisp
        (nix +lsp)
-       (org +pretty)
+       (org +pretty +roam)
        sh
 
        :tools
