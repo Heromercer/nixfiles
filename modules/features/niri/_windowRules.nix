@@ -84,5 +84,13 @@
       open-fullscreen = true;
       open-on-output = "DP-1";
     }
+
+    {
+      matches = [
+        { app-id = "emacs"; }
+      ];
+      open-fullscreen = true;
+    }
+
   ];
 }
