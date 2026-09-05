@@ -1,7 +1,8 @@
 (setq doom-theme 'doom-one
       display-line-numbers-type t
       doom-user-dir (expand-file-name "~/.nixfiles/modules/core/emacs/doom.d/")
-      doom-font (font-spec :family "JetBrains Mono" :size 16))
+      doom-font (font-spec :family "JetBrains Mono" :size 16)
+      confirm-kill-emacs)
 (setq org-directory "~/Documents/org")
 
 (after! apheleia
