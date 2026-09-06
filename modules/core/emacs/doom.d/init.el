@@ -48,7 +48,7 @@
 
        :lang
        emacs-lisp
-       (nix +lsp)
+       (nix +lsp +tree-sitter)
        (org +pretty +roam)
        sh
 
@@ -57,6 +57,7 @@
        lookup
        magit
        pdf
+       tree-sitter
 
        :config
        literate
