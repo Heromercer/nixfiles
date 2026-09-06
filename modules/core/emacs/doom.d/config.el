@@ -70,11 +70,6 @@
 
 ;; (setq initial-buffer-choice ') change if you want to change emacs start screen
 
-
-(map! :leader
-      :desc "Comment line" "-" #'comment-line)
-
-
 (after! apheleia
   (setf (alist-get 'nixfmt apheleia-formatters) '("nixfmt"))
   (setf (alist-get 'nix-mode apheleia-mode-alist) 'nixfmt)
