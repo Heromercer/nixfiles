@@ -2,8 +2,13 @@
       display-line-numbers-type t
       doom-user-dir (expand-file-name "~/.nixfiles/modules/core/emacs/doom.d/")
       doom-font (font-spec :family "JetBrains Mono" :size 16))
+
 (setq org-directory "~/Documents/org/")
 (setq org-roam-directory "~/Documents/org/")
+(setq org-modern-table-vertical 1)
+(setq org-modern-table t)
+(add-hook 'org-mode-hook #'hl-todo-mode)
+
 (setq confirm-kill-emacs nil)
 (setq catppuccin-flavor 'macchiato)
 
