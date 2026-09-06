@@ -59,4 +59,5 @@
        pdf
 
        :config
+       literate
        (default +bindings +smartparens))

@@ -1,8 +1,20 @@
+#+title: Config
+
+* Table of Contents :toc:
+- [[#doom-settings][Doom Settings]]
+- [[#org][Org]]
+- [[#other-stuff][Other Stuff]]
+
+* Doom Settings
+#+begin_src emacs-lisp
 (setq doom-theme 'catppuccin)
 (setq catppuccin-flavor 'macchiato)
 (setq doom-user-dir (expand-file-name "~/.nixfiles/modules/core/emacs/doom.d/"))
 (setq doom-font (font-spec :family "JetBrains Mono" :size 16))
+#+end_src
 
+* Org
+#+begin_src emacs-lisp
 (setq org-directory "~/Documents/org/")
 (setq org-roam-directory "~/Documents/org/")
 (setq org-modern-table-vertical 1)
@@ -62,7 +74,10 @@
         org-roam-ui-follow t
         org-roam-ui-update-on-save t
         org-roam-ui-open-on-start t))
+#+end_src
 
+* Other Stuff
+#+begin_src emacs-lisp
 (setq display-line-numbers-type t)
 
 
@@ -79,3 +94,8 @@
   (setf (alist-get 'nixfmt apheleia-formatters) '("nixfmt"))
   (setf (alist-get 'nix-mode apheleia-mode-alist) 'nixfmt)
   (setf (alist-get 'nix-ts-mode apheleia-mode-alist) 'nixfmt))
+
+
+
+
+#+end_src
