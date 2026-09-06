@@ -1,10 +1,11 @@
-(setq doom-theme 'doom-one
+(setq doom-theme 'catppuccin
       display-line-numbers-type t
       doom-user-dir (expand-file-name "~/.nixfiles/modules/core/emacs/doom.d/")
       doom-font (font-spec :family "JetBrains Mono" :size 16))
 (setq org-directory "~/Documents/org/")
 (setq org-roam-directory "~/Documents/org/")
 (setq confirm-kill-emacs nil)
+(setq catppuccin-flavor 'macchiato)
 
 (after! org-roam
   (setq org-roam-capture-templates
@@ -19,8 +20,13 @@
            :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
            :unnarrowed t)
 
-          ("b" "book notes" plain
+          ("b" "book" plain
            (file "~/Documents/org/templates/bookTemplate.org")
+           :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+           :unnarrowed t)
+
+          ("c" "contact" plain
+           (file "~/Documents/org/templates/contactTemplate.org")
            :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
            :unnarrowed t)
           )

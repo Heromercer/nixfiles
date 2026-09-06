@@ -2,3 +2,5 @@
 
 ;; Org Roam UI
 (package! org-roam-ui)
+
+(package! catppuccin-theme)
