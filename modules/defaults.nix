@@ -17,7 +17,7 @@
       services.xserver.enable = false;
       systemd.services.NetworkManager-wait-online.enable = false;
       environment.variables = {
-        EDITOR = "nvim";
+        EDITOR = "emacs";
       };
     };
 
