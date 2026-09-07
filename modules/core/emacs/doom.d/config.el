@@ -1,7 +1,7 @@
 (setq doom-theme 'catppuccin)
 (setq catppuccin-flavor 'macchiato)
 (setq doom-user-dir (expand-file-name "~/.nixfiles/modules/core/emacs/doom.d/"))
-(setq doom-font (font-spec :family "JetBrains Mono" :size 16))
+(setq doom-font (font-spec :family "JetBrains Mono" :size 15))
 
 (setq org-directory "~/Documents/org/")
 (setq org-roam-directory "~/Documents/org/")
