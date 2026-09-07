@@ -44,10 +44,11 @@
             (tty +osc)
 
             :lang
-            (emacs-lisp +lsp +tree-sitter)
+            emacs-lisp
             (nix +lsp +tree-sitter)
             (org +pretty +roam)
             sh
+            (markdown +lsp +grip +tree-sitter)
 
             :tools
             (lsp +eglot)
