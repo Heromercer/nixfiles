@@ -19,6 +19,15 @@
 
           experimentalFetchTree = true;
         };
+
+        # packages for dirvish
+        home.packages = with pkgs; [
+          imagemagick
+          poppler
+          ffmpegthumbnailer
+          mediainfo
+          vips
+        ];
       };
   };
 }
