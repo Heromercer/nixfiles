@@ -4,7 +4,7 @@
   ...
 }:
 {
-  den.schema.host.includes = [ mercer.neovim ];
+  # den.schema.host.includes = [ mercer.neovim ];
 
   mercer.neovim = {
     nixos =
