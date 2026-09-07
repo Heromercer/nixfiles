@@ -1,7 +1,12 @@
-{ inputs, mercer, ... }:
 {
+  inputs,
+  mercer,
+  ...
+}:
+{
+  den.schema.user.includes = [ mercer.emacs ];
+
   mercer.emacs = {
-    den.schema.host.includes = [ mercer.emacs ];
 
     homeManager =
       { pkgs, ... }:
