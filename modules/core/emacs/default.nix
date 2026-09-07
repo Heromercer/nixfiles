@@ -25,13 +25,16 @@
           experimentalFetchTree = true;
         };
 
-        # packages for dirvish
         home.packages = with pkgs; [
+          # packages for dirvish
           imagemagick
           poppler
           ffmpegthumbnailer
           mediainfo
           vips
+
+          # pakcage for spelling checks
+          ispell
         ];
       };
   };
