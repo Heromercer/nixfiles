@@ -4,3 +4,5 @@
 (package! org-roam-ui)
 
 (package! catppuccin-theme)
+
+(package! 2048-game)
