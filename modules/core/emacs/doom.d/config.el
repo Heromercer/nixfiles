@@ -1,13 +1,28 @@
-(setq doom-theme 'catppuccin)
-(setq catppuccin-flavor 'macchiato)
+(setq doom-theme 'doom-moonlight)
+;; (setq catppuccin-flavor 'macchiato)
 (setq doom-user-dir (expand-file-name "~/.nixfiles/modules/core/emacs/doom.d/"))
 (setq doom-font (font-spec :family "JetBrains Mono" :size 15))
 
 (setq org-directory "~/Documents/org/")
-(setq org-roam-directory "~/Documents/org/")
 (setq org-modern-table-vertical 1)
 (setq org-modern-table t)
 (add-hook 'org-mode-hook #'hl-todo-mode)
+
+
+(custom-theme-set-faces!
+  ;; 'catppuccin
+  'doom-moonlight
+  '(org-level-1 :inherit outline-1 :height 1.6)
+  '(org-level-2 :inherit outline-2 :height 1.5)
+  '(org-level-3 :inherit outline-3 :height 1.4)
+  '(org-level-4 :inherit outline-4 :height 1.3)
+  '(org-level-5 :inherit outline-5 :height 1.2)
+  '(org-level-6 :inherit outline-6 :height 1.1)
+  '(org-level-7 :inherit outline-7 :height 1.0)
+  '(org-level-8 :inherit outline-8 :height 1.0)
+  '(org-document-title :height 1.7 :bold t :underline nil))
+
+(setq org-roam-directory "~/Documents/org/")
 
 (after! org-roam
   (setq org-roam-capture-templates
@@ -36,18 +51,6 @@
 
   )
 
-(custom-theme-set-faces!
-  'catppuccin
-  '(org-level-1 :inherit outline-1 :height 1.6)
-  '(org-level-2 :inherit outline-2 :height 1.5)
-  '(org-level-3 :inherit outline-3 :height 1.4)
-  '(org-level-4 :inherit outline-4 :height 1.3)
-  '(org-level-5 :inherit outline-5 :height 1.2)
-  '(org-level-6 :inherit outline-6 :height 1.1)
-  '(org-level-7 :inherit outline-7 :height 1.0)
-  '(org-level-8 :inherit outline-8 :height 1.0)
-  '(org-document-title :height 1.7 :bold t :underline nil))
-
 (use-package! websocket
   :after org-roam)
 
@@ -62,6 +65,9 @@
         org-roam-ui-follow t
         org-roam-ui-update-on-save t
         org-roam-ui-open-on-start t))
+
+(after! org
+  (setq org-agenda-files '("~/Documents/org/agenda/agenda.org")))
 
 (setq display-line-numbers-type t)
 
