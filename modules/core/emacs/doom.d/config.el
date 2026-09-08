@@ -69,6 +69,11 @@
 (after! org
   (setq org-agenda-files '("~/Documents/org/agenda/agenda.org")))
 
+(defun org-agenda-open-hook()
+  (olivetti-mode))
+
+(add-hook 'org-agenda-mode-hook 'org-agenda-open-hook)
+
 (setq display-line-numbers-type t)
 
 
