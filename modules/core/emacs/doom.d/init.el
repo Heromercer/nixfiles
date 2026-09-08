@@ -24,6 +24,7 @@
             electric
             undo
             vc
+            eww
 
             :term
             eshell
