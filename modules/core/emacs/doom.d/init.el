@@ -50,6 +50,7 @@
             (org +pretty +roam)
             sh
             (markdown +lsp +grip +tree-sitter)
+            (yaml +lsp +tree-sitter)
 
             :tools
             (lsp +eglot)
