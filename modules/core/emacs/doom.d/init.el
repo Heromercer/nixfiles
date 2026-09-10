@@ -10,6 +10,7 @@
             vi-tilde-fringe
             workspaces
             window-select
+            tabs
 
             :editor
             (evil +everywhere)
