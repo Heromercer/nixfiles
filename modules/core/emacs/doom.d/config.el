@@ -55,8 +55,18 @@
            :unnarrowed t)
           )
         )
-
   )
+
+;; function for chapter character template
+(defun my/org-capture-character-list ()
+  "Repeatedly prompt for character names until blank input, return as org bullets."
+  (let (names name)
+    (while (not (string-empty-p
+                 (setq name (string-trim (read-string "Character name (blank to finish): ")))))
+      (push name names))
+    (if names
+        (mapconcat (lambda (n) (concat "- " n)) (nreverse names) "\n")
+      "- ")))
 
 (use-package! websocket
   :after org-roam)
