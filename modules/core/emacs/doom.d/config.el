@@ -37,8 +37,15 @@
            :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
            :unnarrowed t)
 
-          ("b" "book" plain
+          ("b" "book")
+
+          ("bb" "book" plain
            (file "~/Documents/org/templates/bookTemplate.org")
+           :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+           :unnarrowed t)
+
+          ("bc" "book chapter" plain
+           (file "~/Documents/org/templates/bookChapterTemplate.org")
            :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
            :unnarrowed t)
 
@@ -64,7 +71,7 @@
   (setq org-roam-ui-sync-theme t
         org-roam-ui-follow t
         org-roam-ui-update-on-save t
-        org-roam-ui-open-on-start t))
+        org-roam-ui-open-on-start nil))
 
 (after! org
   (setq org-agenda-files '("~/Documents/org/agenda/agenda.org")))
