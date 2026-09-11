@@ -11,10 +11,10 @@
       {
         includes = with mercer; [
           desktop
-          dms
+          # dms
           kitty
           niri
-          # noctalia
+          noctalia
           rmpc
         ];
       };

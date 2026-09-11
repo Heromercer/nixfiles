@@ -31,5 +31,16 @@
         ];
       };
     };
+
+    homeManager = {
+      imports = [ inputs.noctalia.homeModules.default ];
+
+      programs.noctalia = {
+
+        settings = {
+
+        };
+      };
+    };
   };
 }

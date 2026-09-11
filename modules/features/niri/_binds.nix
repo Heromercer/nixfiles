@@ -17,30 +17,34 @@
       "Mod+Shift+E".action.spawn-sh = "kitty -e fish -c 'nvim; exec fish'";
       "Mod+SHift+M".action.spawn-sh = "kitty -e rmpc";
 
-      "Mod+D".action = spawn "dms" "ipc" "call" "spotlight" "toggle";
-      "Mod+X".action = spawn "dms" "ipc" "call" "powermenu" "toggle";
-      "Mod+T".action = spawn "dms" "ipc" "call" "clipboard" "toggle";
-      "Mod+M".action = spawn "dms" "ipc" "call" "processlist" "toggle";
-      "Mod+N".action = spawn "dms" "ipc" "call" "notifications" "toggle";
-      "Mod+Shift+Comma".action = spawn "dms" "ipc" "call" "settings" "toggle";
-      "Mod+P".action = spawn "dms" "ipc" "call" "notepad" "toggle";
-      "Mod+Alt+L".action = spawn "dms" "ipc" "call" "lock" "lock";
-      "Mod+Shift+C".action = spawn "dms" "ipc" "call" "control-center" "toggle";
-      "Mod+Shift+W".action = spawn "dms" "ipc" "call" "dankdash" "wallpaper";
-      "Mod+Shift+N".action = spawn "dms" "ipc" "call" "night" "toggle";
-      "Mod+Alt+R".action = spawn "dms" "ipc" "call" "screenRecorder" "toggleRecording";
+      # Dank Material Shell keybinds
+      # "Mod+D".action = spawn "dms" "ipc" "call" "spotlight" "toggle";
+      # "Mod+X".action = spawn "dms" "ipc" "call" "powermenu" "toggle";
+      # "Mod+T".action = spawn "dms" "ipc" "call" "clipboard" "toggle";
+      # "Mod+M".action = spawn "dms" "ipc" "call" "processlist" "toggle";
+      # "Mod+N".action = spawn "dms" "ipc" "call" "notifications" "toggle";
+      # "Mod+Shift+Comma".action = spawn "dms" "ipc" "call" "settings" "toggle";
+      # "Mod+P".action = spawn "dms" "ipc" "call" "notepad" "toggle";
+      # "Mod+Alt+L".action = spawn "dms" "ipc" "call" "lock" "lock";
+      # "Mod+Shift+C".action = spawn "dms" "ipc" "call" "control-center" "toggle";
+      # "Mod+Shift+W".action = spawn "dms" "ipc" "call" "dankdash" "wallpaper";
+      # "Mod+Shift+N".action = spawn "dms" "ipc" "call" "night" "toggle";
+      # "Mod+Alt+R".action = spawn "dms" "ipc" "call" "screenRecorder" "toggleRecording";
+      # "Ctrl+Home".action = spawn "dms" "screenshot" "full";
+      # "Ctrl+Shift+Home".action = spawn "dms" "screenshot";
 
-      # "Mod+D".action = spawn-sh "noctalia msg panel-toggle launcher";
-      # "Mod+S".action = spawn-sh "noctalia msg panel-toggle control-center";
-      # "Mod+Shift+Comma".action = spawn-sh "noctalia msg settings-toggle";
-      # "Alt+Tab".action = spawn-sh "noctalia msg window-switcher";
+      # Noctailia Keybinds
+      "Mod+D".action = spawn-sh "noctalia msg panel-toggle launcher";
+      "Mod+S".action = spawn-sh "noctalia msg panel-toggle control-center";
+      "Mod+Shift+Comma".action = spawn-sh "noctalia msg settings-toggle";
+      "Alt+Tab".action = spawn-sh "noctalia msg window-switcher";
 
-      # # Audio & Brightness
-      # "XF86AudioRaiseVolume".action = spawn-sh "noctalia msg volume-up";
-      # "XF86AudioLowerVolume".action = spawn-sh "noctalia msg volume-down";
-      # "XF86AudioMute".action = spawn-sh "noctalia msg volume-mute";
-      # "XF86MonBrightnessUp".action = spawn-sh "noctalia msg brightness-up";
-      # "XF86MonBrightnessDown".action = spawn-sh "noctalia msg brightness-down";
+      # Audio & Brightness
+      "XF86AudioRaiseVolume".action = spawn-sh "noctalia msg volume-up";
+      "XF86AudioLowerVolume".action = spawn-sh "noctalia msg volume-down";
+      "XF86AudioMute".action = spawn-sh "noctalia msg volume-mute";
+      "XF86MonBrightnessUp".action = spawn-sh "noctalia msg brightness-up";
+      "XF86MonBrightnessDown".action = spawn-sh "noctalia msg brightness-down";
 
       "Mod+H".action = focus-column-left;
       "Mod+L".action = focus-column-right;
@@ -136,8 +140,6 @@
 
       "Mod+W".action = toggle-column-tabbed-display;
 
-      "Ctrl+Home".action = spawn "dms" "screenshot" "full";
-      "Ctrl+Shift+Home".action = spawn "dms" "screenshot";
     };
   };
 }
