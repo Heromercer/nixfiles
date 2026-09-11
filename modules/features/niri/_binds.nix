@@ -38,6 +38,7 @@
       "Mod+S".action = spawn-sh "noctalia msg panel-toggle control-center";
       "Mod+Shift+Comma".action = spawn-sh "noctalia msg settings-toggle";
       "Alt+Tab".action = spawn-sh "noctalia msg window-switcher";
+      "Mod+X".action = spawn-sh "noctalia msg panel-toggle session";
 
       # Audio & Brightness
       "XF86AudioRaiseVolume".action = spawn-sh "noctalia msg volume-up";
