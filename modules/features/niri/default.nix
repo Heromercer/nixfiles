@@ -51,7 +51,11 @@
 
           spawn-at-startup = [
             { command = [ "xwayland-satellite" ]; }
+            { command = [ "noctalia" ]; }
           ];
+
+          # for noctalia notif actions
+          debug.honor-xdg-activation-with-invalid-serial = [ ];
 
           input = {
             keyboard = {
@@ -118,6 +122,7 @@
 
           layer-rules = [
             {
+              matches = [ { namespace = "^noctalia-wallpaper*"; } ];
               place-within-backdrop = true;
             }
           ];

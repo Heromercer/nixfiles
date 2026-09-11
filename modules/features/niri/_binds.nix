@@ -30,6 +30,18 @@
       "Mod+Shift+N".action = spawn "dms" "ipc" "call" "night" "toggle";
       "Mod+Alt+R".action = spawn "dms" "ipc" "call" "screenRecorder" "toggleRecording";
 
+      # "Mod+D".action = spawn-sh "noctalia msg panel-toggle launcher";
+      # "Mod+S".action = spawn-sh "noctalia msg panel-toggle control-center";
+      # "Mod+Shift+Comma".action = spawn-sh "noctalia msg settings-toggle";
+      # "Alt+Tab".action = spawn-sh "noctalia msg window-switcher";
+
+      # # Audio & Brightness
+      # "XF86AudioRaiseVolume".action = spawn-sh "noctalia msg volume-up";
+      # "XF86AudioLowerVolume".action = spawn-sh "noctalia msg volume-down";
+      # "XF86AudioMute".action = spawn-sh "noctalia msg volume-mute";
+      # "XF86MonBrightnessUp".action = spawn-sh "noctalia msg brightness-up";
+      # "XF86MonBrightnessDown".action = spawn-sh "noctalia msg brightness-down";
+
       "Mod+H".action = focus-column-left;
       "Mod+L".action = focus-column-right;
       "Mod+K".action = focus-window-up;
