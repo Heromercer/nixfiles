@@ -13,7 +13,16 @@
       imports = [ inputs.nix-index-database.nixosModules.default ];
       programs = {
         nix-index-database.comma.enable = true;
-        nix-ld.enable = true;
+        nix-ld = {
+          enable = true;
+          libraries = with pkgs; [
+            icu
+            fontconfig
+            libICE
+            libSM
+            libX11
+          ];
+        };
       };
 
       nixpkgs.config = {
