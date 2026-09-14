@@ -20,7 +20,6 @@
         systemd.services.NetworkManager-wait-online.enable = false;
         environment.variables = {
           EDITOR = "emacs";
-          DOTNET_ROOT = "${pkgs.dotnet-sdk_9}/share/dotnet";
         };
       };
 

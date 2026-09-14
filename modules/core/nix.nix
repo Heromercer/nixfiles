@@ -16,11 +16,16 @@
         nix-ld = {
           enable = true;
           libraries = with pkgs; [
-            icu
-            fontconfig
-            libICE
-            libSM
-            libX11
+            # icu
+            # fontconfig.lib
+            # libICE
+            # libSM
+            # libX11
+            # freetype
+            # exoat
+            # nss
+            # atk
+            # cups
           ];
         };
       };
