@@ -46,7 +46,11 @@
       programs.noctalia = {
 
         settings = {
-
+          shell = {
+            screenshot = {
+              directory = "~/Pictures/Screenshots/";
+            };
+          };
         };
       };
     };

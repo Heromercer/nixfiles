@@ -40,6 +40,7 @@
       "Alt+Tab".action = spawn-sh "noctalia msg window-switcher";
       "Mod+X".action = spawn-sh "noctalia msg panel-toggle session";
       "Mod+Shift+W".action = spawn-sh "noctalia msg panel-toggle wallpaper";
+      "Ctrl+Shift+Home".action = spawn-sh "noctalia msg screenshot-region";
 
       # Audio & Brightness
       "XF86AudioRaiseVolume".action = spawn-sh "noctalia msg volume-up";
