@@ -8,3 +8,5 @@
 (package! 2048-game)
 
 (package! olivetti)
+
+(package! speed-type)
