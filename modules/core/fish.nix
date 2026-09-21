@@ -20,7 +20,7 @@
             nhs = "nh os switch";
             nhsu = "nh os switch -u";
             nhc = "nh clean all --keep 10 --ask";
-            check = "sudo nix flake check";
+            check = "sudo nix flake check --no-build";
             nf = "cd .nixfiles && nvim";
           };
         };
