@@ -18,6 +18,9 @@
             "nixflix/sonarr/api_key" = { inherit sopsFile; };
             "nixflix/sonarr/password" = { inherit sopsFile; };
             "nixflix/sonarr/username" = { inherit sopsFile; };
+            "nixflix/sonarr_anime/api_key" = { inherit sopsFile; };
+            "nixflix/sonarr_anime/password" = { inherit sopsFile; };
+            "nixflix/sonarr_anime/username" = { inherit sopsFile; };
             "nixflix/radarr/api_key" = { inherit sopsFile; };
             "nixflix/radarr/password" = { inherit sopsFile; };
             "nixflix/radarr/username" = { inherit sopsFile; };
@@ -67,11 +70,20 @@
 
           sonarr = {
             enable = true;
-            group = "media";
             config = {
               apiKey._secret = config.sops.secrets."nixflix/sonarr/api_key".path;
               hostConfig.password._secret = config.sops.secrets."nixflix/sonarr/password".path;
               hostConfig.username._secret = config.sops.secrets."nixflix/sonarr/username".path;
+              # hostConfig.bindAddress = "192.168.50.2";
+            };
+          };
+
+          sonarr-anime = {
+            enable = true;
+            config = {
+              apiKey._secret = config.sops.secrets."nixflix/sonarr_anime/api_key".path;
+              hostConfig.password._secret = config.sops.secrets."nixflix/sonarr_anime/password".path;
+              hostConfig.username._secret = config.sops.secrets."nixflix/sonarr_anime/username".path;
             };
           };
 
