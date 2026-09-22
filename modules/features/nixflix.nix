@@ -27,6 +27,7 @@
             "nixflix/lidarr/api_key" = { inherit sopsFile; };
             "nixflix/lidarr/password" = { inherit sopsFile; };
             "nixflix/lidarr/username" = { inherit sopsFile; };
+            "nixflix/navidrome/password" = { inherit sopsFile; };
             "nixflix/sabnzbd/api_key" = { inherit sopsFile; };
             "nixflix/sabnzbd/nzb_key" = { inherit sopsFile; };
             "nixflix/sabnzbd/password" = { inherit sopsFile; };
@@ -102,6 +103,17 @@
               apiKey._secret = config.sops.secrets."nixflix/lidarr/api_key".path;
               hostConfig.password._secret = config.sops.secrets."nixflix/lidarr/password".path;
               hostConfig.username._secret = config.sops.secrets."nixflix/lidarr/username".path;
+            };
+          };
+
+          navidrome = {
+            enable = true;
+            users = {
+              "Alec" = {
+                userName = "alec";
+                isAdmin = true;
+                password._secret = config.sops.secrets."nixflix/navidrome/password".path;
+              };
             };
           };
 
