@@ -3,7 +3,6 @@
   mercer = {
     desktop.includes = [
       <mercer/appimage>
-      <mercer/arr>
       <mercer/audio>
       <mercer/bluetooth>
       <mercer/discord>
