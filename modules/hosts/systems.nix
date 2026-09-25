@@ -30,6 +30,7 @@
       <mercer/fastfetch>
       <mercer/imv>
       <mercer/mpv>
+      <mercer/secrets>
       <mercer/services/power-mngmt>
       <mercer/services/udisks>
       <mercer/xdg>

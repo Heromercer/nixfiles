@@ -11,9 +11,9 @@
       {
         includes = with mercer; [
           laptop
-          dms
           kitty
           niri
+          noctalia
         ];
       };
 

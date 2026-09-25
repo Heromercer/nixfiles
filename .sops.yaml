@@ -4,6 +4,7 @@ keys:
   - &hosts:
     - &firelink age1k93w2yghjxa9ytfd9cvw8fq0d0xuyltusjnx4qxm88ulckwcvgyq6d6g7a
     - &tower age18tta7nwrdax003ldmay4kyuek6c0qcxpmtezwfvdnpmqkvxvz52qkk9gsm
+    - &majula age1fxev0lnyakqfq9w82u66e4j3yjw00zgk5w0hvgr2m9mrex98hdcsml2wp5
 creation_rules:
   - path_regex: secrets.yaml$
     key_groups:
@@ -11,5 +12,4 @@ creation_rules:
         - *alec
         - *firelink
         - *tower
-
-
+        - *majula
