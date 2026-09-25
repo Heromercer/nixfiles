@@ -127,9 +127,9 @@
                 password._secret = config.sops.secrets."nixflix/jellyfin/admin_password".path;
               };
             };
-            network = {
-              localNetworkAddresses = [ "192.168.50.2" ];
-            };
+            # network = {
+            #   localNetworkAddresses = [ "192.168.50.2" ];
+            # };
           };
 
           seerr = {

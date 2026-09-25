@@ -36,6 +36,7 @@
     ];
     server.includes = [
       <mercer/secrets>
+      <mercer/arr>
       <mercer/services/tailscale>
     ];
   };
