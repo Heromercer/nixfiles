@@ -99,6 +99,7 @@
 
           lidarr = {
             enable = true;
+            openFirewall = true;
             config = {
               apiKey._secret = config.sops.secrets."nixflix/lidarr/api_key".path;
               hostConfig.password._secret = config.sops.secrets."nixflix/lidarr/password".path;
@@ -117,25 +118,25 @@
             };
           };
 
-          jellyfin = {
-            enable = true;
-            openFirewall = true;
-            apiKey._secret = config.sops.secrets."nixflix/jellyfin/api_key".path;
-            users = {
-              admin = {
-                policy.isAdministrator = true;
-                password._secret = config.sops.secrets."nixflix/jellyfin/admin_password".path;
-              };
-            };
-            # network = {
-            #   localNetworkAddresses = [ "192.168.50.2" ];
-            # };
-          };
+          # jellyfin = {
+          #   enable = true;
+          #   openFirewall = true;
+          #   apiKey._secret = config.sops.secrets."nixflix/jellyfin/api_key".path;
+          #   users = {
+          #     admin = {
+          #       policy.isAdministrator = true;
+          #       password._secret = config.sops.secrets."nixflix/jellyfin/admin_password".path;
+          #     };
+          #   };
+          #   # network = {
+          #   #   localNetworkAddresses = [ "192.168.50.2" ];
+          #   # };
+          # };
 
-          seerr = {
-            enable = true;
-            apiKey._secret = config.sops.secrets."nixflix/seerr/api_key".path;
-          };
+          # seerr = {
+          #   enable = true;
+          #   apiKey._secret = config.sops.secrets."nixflix/seerr/api_key".path;
+          # };
 
           prowlarr = {
             enable = true;
