@@ -1,11 +1,20 @@
 #+title: Config
 
 * Table of Contents :toc:
+- [[#centaur-tabs][Centaur Tabs]]
 - [[#doom-settings][Doom Settings]]
 - [[#org-mode][Org Mode]]
   - [[#org-roam][Org Roam]]
   - [[#org-agenda][Org Agenda]]
 - [[#other-stuff][Other Stuff]]
+
+* Centaur Tabs
+#+begin_src emacs-lisp
+(map! :after centaur-tabs
+      :map centaur-tabs-mode-map
+      :n "H" #'centaur-tabs-backward
+      :n "L" #'centaur-tabs-forward)
+#+end_src
 
 * Doom Settings
 #+begin_src emacs-lisp
@@ -35,11 +44,9 @@
   '(org-level-7 :inherit outline-7 :height 1.0)
   '(org-level-8 :inherit outline-8 :height 1.0)
   '(org-document-title :height 1.7 :bold t :underline nil))
-
 #+end_src
 
 ** Org Roam
-
 #+begin_src emacs-lisp
 (setq org-roam-directory "~/Documents/org/")
 
@@ -104,7 +111,6 @@
 #+end_src
 
 ** Org Agenda
-
 #+begin_src emacs-lisp
 (after! org
   (setq org-agenda-files '("~/Documents/org/agenda/agenda.org")))

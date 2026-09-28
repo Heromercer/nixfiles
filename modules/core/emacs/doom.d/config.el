@@ -1,3 +1,8 @@
+(map! :after centaur-tabs
+      :map centaur-tabs-mode-map
+      :n "H" #'centaur-tabs-backward
+      :n "L" #'centaur-tabs-forward)
+
 (setq doom-theme 'doom-moonlight)
 ;; (setq catppuccin-flavor 'macchiato)
 (setq doom-user-dir (expand-file-name "~/.nixfiles/modules/core/emacs/doom.d/"))
