@@ -3,6 +3,11 @@
       :n "H" #'centaur-tabs-backward
       :n "L" #'centaur-tabs-forward)
 
+(map! :after dirvish
+      :map dirvish-mode-map
+      :n "y" #'dirvish-yank-menu
+      :v "y" #'dirvish-yank-menu)
+
 (setq doom-theme 'doom-moonlight)
 ;; (setq catppuccin-flavor 'macchiato)
 (setq doom-user-dir (expand-file-name "~/.nixfiles/modules/core/emacs/doom.d/"))

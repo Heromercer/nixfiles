@@ -2,6 +2,7 @@
 
 * Table of Contents :toc:
 - [[#centaur-tabs][Centaur Tabs]]
+- [[#dirvish][Dirvish]]
 - [[#doom-settings][Doom Settings]]
 - [[#org-mode][Org Mode]]
   - [[#org-roam][Org Roam]]
@@ -14,6 +15,14 @@
       :map centaur-tabs-mode-map
       :n "H" #'centaur-tabs-backward
       :n "L" #'centaur-tabs-forward)
+#+end_src
+
+* Dirvish
+#+begin_src emacs-lisp
+(map! :after dirvish
+      :map dirvish-mode-map
+      :n "y" #'dirvish-yank-menu
+      :v "y" #'dirvish-yank-menu)
 #+end_src
 
 * Doom Settings
