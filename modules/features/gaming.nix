@@ -31,9 +31,7 @@
             mgba
             prismlauncher
             protonup-qt
-            (rpcs3.overrideAttrs (prev: {
-              cmakeFlags = prev.cmakeFlags ++ [ (lib.cmakeBool "BUILD_SHARED_LIBS" false) ];
-            }))
+            rpcs3
             shadps4
             wine
             (wine.override { wineBuild = "wine64"; })
