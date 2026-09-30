@@ -36,6 +36,9 @@
           # pakcage for spelling checks
           ispell
 
+          # package for grammar
+          languagetool
+
           # package for yaml lsp
           yaml-language-server
         ];
