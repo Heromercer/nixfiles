@@ -65,11 +65,13 @@
           ("d" "default" plain
            "%?"
            :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+           :empty-lines-before 1
            :unnarrowed t)
 
           ("l" "programming language" plain
            "* Characteristics\n\n- Family: %?\n- Inspired by: \n\n* Reference:\n\n"
            :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+           :empty-lines-before 1
            :unnarrowed t)
 
           ("b" "book")
@@ -77,16 +79,19 @@
           ("bb" "book" plain
            (file "~/Documents/org/templates/bookTemplate.org")
            :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+           :empty-lines-before 1
            :unnarrowed t)
 
           ("bc" "book chapter" plain
            (file "~/Documents/org/templates/bookChapterTemplate.org")
            :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+           :empty-lines-before 1
            :unnarrowed t)
 
           ("c" "contact" plain
            (file "~/Documents/org/templates/contactTemplate.org")
            :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+           :empty-lines-before 1
            :unnarrowed t)
           )
         )
