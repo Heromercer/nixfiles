@@ -32,7 +32,7 @@
             vterm
 
             :checkers
-            syntax
+            (syntax +icons +flymake +childframe)
             (spell +flyspell)
             grammar
 
