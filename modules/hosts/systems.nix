@@ -11,6 +11,7 @@
       <mercer/hardware>
       <mercer/imv>
       <mercer/mpv>
+      <mercer/nixdatifier>
       <mercer/plymouth>
       <mercer/secrets>
       <mercer/services/mysql>
