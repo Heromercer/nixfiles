@@ -16,6 +16,7 @@
       <mercer/secrets>
       <mercer/services/mysql>
       <mercer/services/printing>
+      <mercer/services/syncthing>
       <mercer/services/tailscale>
       <mercer/services/udisks>
       <mercer/services/vpn>
@@ -39,6 +40,7 @@
     server.includes = [
       <mercer/secrets>
       <mercer/arr>
+      <mercer/services/syncthing>
       <mercer/services/tailscale>
     ];
   };
