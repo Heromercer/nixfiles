@@ -147,6 +147,7 @@
 
           seerr = {
             enable = true;
+            openFirewall = true;
             apiKey._secret = config.sops.secrets."nixflix/seerr/api_key".path;
           };
 
@@ -156,7 +157,7 @@
               apiKey._secret = config.sops.secrets."nixflix/prowlarr/api_key".path;
               hostConfig.password._secret = config.sops.secrets."nixflix/prowlarr/password".path;
               hostConfig.username._secret = config.sops.secrets."nixflix/prowlarr/username".path;
-              # hostConfig.bindAddress = "192.168.50.224";
+              hostConfig.bindAddress = "192.168.50.224";
               # hostConfig.bindAddress = "192.168.50.2";
               indexers = [
                 # {
