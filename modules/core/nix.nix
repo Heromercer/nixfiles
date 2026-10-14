@@ -42,6 +42,10 @@
             "nix-command"
             "flakes"
           ];
+          trusted-users = [
+            "root"
+            "alec"
+          ];
         };
       };
 
