@@ -41,6 +41,7 @@
             "nixflix/prowlarr/username" = { inherit sopsFile; };
             "nixflix/prowlarr/indexer_api_keys/NZBFinder" = { inherit sopsFile; };
             "nixflix/prowlarr/indexer_api_keys/NzbPlanet" = { inherit sopsFile; };
+            "nixflix/prowlarr/indexer_api_keys/nzbgeek" = { inherit sopsFile; };
           };
 
         imports = [ inputs.nixflix.nixosModules.default ];
