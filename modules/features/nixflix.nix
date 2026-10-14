@@ -41,7 +41,7 @@
             "nixflix/prowlarr/username" = { inherit sopsFile; };
             "nixflix/prowlarr/indexer_api_keys/NZBFinder" = { inherit sopsFile; };
             "nixflix/prowlarr/indexer_api_keys/NzbPlanet" = { inherit sopsFile; };
-            "nixflix/prowlarr/indexer_api_keys/nzbgeek" = { inherit sopsFile; };
+            "nixflix/prowlarr/indexer_api_keys/NZBgeek" = { inherit sopsFile; };
           };
 
         imports = [ inputs.nixflix.nixosModules.default ];
@@ -77,6 +77,7 @@
               hostConfig.password._secret = config.sops.secrets."nixflix/sonarr/password".path;
               hostConfig.username._secret = config.sops.secrets."nixflix/sonarr/username".path;
               hostConfig.bindAddress = "192.168.50.224";
+              # hostConfig.bindAddress = "192.168.50.2";
             };
           };
 
@@ -87,6 +88,7 @@
               hostConfig.password._secret = config.sops.secrets."nixflix/sonarr_anime/password".path;
               hostConfig.username._secret = config.sops.secrets."nixflix/sonarr_anime/username".path;
               hostConfig.bindAddress = "192.168.50.224";
+              # hostConfig.bindAddress = "192.168.50.2";
             };
           };
 
@@ -97,6 +99,7 @@
               hostConfig.password._secret = config.sops.secrets."nixflix/radarr/password".path;
               hostConfig.username._secret = config.sops.secrets."nixflix/radarr/username".path;
               hostConfig.bindAddress = "192.168.50.224";
+              # hostConfig.bindAddress = "192.168.50.2";
             };
           };
 
@@ -108,6 +111,7 @@
               hostConfig.password._secret = config.sops.secrets."nixflix/lidarr/password".path;
               hostConfig.username._secret = config.sops.secrets."nixflix/lidarr/username".path;
               hostConfig.bindAddress = "192.168.50.224";
+              # hostConfig.bindAddress = "192.168.50.2";
             };
           };
 
@@ -122,28 +126,29 @@
             };
             settings = {
               Address = "100.74.74.58";
+              # Address = "192.168.50.2";
             };
           };
 
-          # jellyfin = {
-          #   enable = true;
-          #   openFirewall = true;
-          #   apiKey._secret = config.sops.secrets."nixflix/jellyfin/api_key".path;
-          #   users = {
-          #     admin = {
-          #       policy.isAdministrator = true;
-          #       password._secret = config.sops.secrets."nixflix/jellyfin/admin_password".path;
-          #     };
-          #   };
-          #   # network = {
-          #   #   localNetworkAddresses = [ "192.168.50.2" ];
-          #   # };
-          # };
+          jellyfin = {
+            enable = true;
+            openFirewall = true;
+            apiKey._secret = config.sops.secrets."nixflix/jellyfin/api_key".path;
+            users = {
+              admin = {
+                policy.isAdministrator = true;
+                password._secret = config.sops.secrets."nixflix/jellyfin/admin_password".path;
+              };
+            };
+            network = {
+              localNetworkAddresses = [ "192.168.50.224" ];
+            };
+          };
 
-          # seerr = {
-          #   enable = true;
-          #   apiKey._secret = config.sops.secrets."nixflix/seerr/api_key".path;
-          # };
+          seerr = {
+            enable = true;
+            apiKey._secret = config.sops.secrets."nixflix/seerr/api_key".path;
+          };
 
           prowlarr = {
             enable = true;
@@ -151,7 +156,8 @@
               apiKey._secret = config.sops.secrets."nixflix/prowlarr/api_key".path;
               hostConfig.password._secret = config.sops.secrets."nixflix/prowlarr/password".path;
               hostConfig.username._secret = config.sops.secrets."nixflix/prowlarr/username".path;
-              hostConfig.bindAddress = "192.168.50.224";
+              # hostConfig.bindAddress = "192.168.50.224";
+              # hostConfig.bindAddress = "192.168.50.2";
               indexers = [
                 # {
                 #   name = "DrunkenSlug";
@@ -166,8 +172,8 @@
                   apiKey._secret = config.sops.secrets."nixflix/prowlarr/indexer_api_keys/NzbPlanet".path;
                 }
                 {
-                  name = "nzbgeek";
-                  apiKey._secret = config.sops.secrets."nixflix/prowlarr/indexer_api_keys/nzbgeek".path;
+                  name = "NZBgeek";
+                  apiKey._secret = config.sops.secrets."nixflix/prowlarr/indexer_api_keys/NZBgeek".path;
                 }
               ];
             };

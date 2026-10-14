@@ -38,6 +38,7 @@
       <mercer/xdg>
     ];
     server.includes = [
+      <mercer/arr>
       <mercer/neovim>
       <mercer/secrets>
       <mercer/services/syncthing>
