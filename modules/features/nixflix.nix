@@ -167,7 +167,7 @@
                 }
                 {
                   name = "nzbgeek";
-                  apiKey._secret = config.sops.secrets."nixflix.prowlarr/indexer_api_keys/nzbgeek".path;
+                  apiKey._secret = config.sops.secrets."nixflix/prowlarr/indexer_api_keys/nzbgeek".path;
                 }
               ];
             };
