@@ -22,6 +22,7 @@
             nhc = "nh clean all --keep 10 --ask";
             check = "sudo nix flake check --no-build";
             nf = "cd .nixfiles && nvim";
+            rebuild-tower = "nixos-rebuild switch --flake .#tower --target-host alec@192.168.50.224 --sudo --ask-sudo-password";
           };
         };
 
