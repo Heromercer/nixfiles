@@ -72,6 +72,7 @@
 
           sonarr = {
             enable = true;
+            openFirewall = true;
             config = {
               apiKey._secret = config.sops.secrets."nixflix/sonarr/api_key".path;
               hostConfig.password._secret = config.sops.secrets."nixflix/sonarr/password".path;
@@ -83,6 +84,7 @@
 
           sonarr-anime = {
             enable = true;
+            openFirewall = true;
             config = {
               apiKey._secret = config.sops.secrets."nixflix/sonarr_anime/api_key".path;
               hostConfig.password._secret = config.sops.secrets."nixflix/sonarr_anime/password".path;
@@ -94,6 +96,7 @@
 
           radarr = {
             enable = true;
+            openFirewall = true;
             config = {
               apiKey._secret = config.sops.secrets."nixflix/radarr/api_key".path;
               hostConfig.password._secret = config.sops.secrets."nixflix/radarr/password".path;
@@ -153,6 +156,7 @@
 
           prowlarr = {
             enable = true;
+            openFirewall = true;
             config = {
               apiKey._secret = config.sops.secrets."nixflix/prowlarr/api_key".path;
               hostConfig.password._secret = config.sops.secrets."nixflix/prowlarr/password".path;
