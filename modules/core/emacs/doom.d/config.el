@@ -71,7 +71,7 @@
 
           ("a" "anime" plain
            (file "~/Documents/org/templates/animeTemplate.org")
-           :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+           :if-new (file+head "~/Documents/org/anime/%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
            :empty-lines-before 1
            :unnarrowed t)
           )
