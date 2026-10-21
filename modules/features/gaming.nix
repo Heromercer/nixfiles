@@ -30,7 +30,6 @@
             mangohud
             mgba
             prismlauncher
-            protonup-qt
             rpcs3
             shadps4
             wine
@@ -44,6 +43,7 @@
           ])
           ++ (with inputs'.nixpkgs-unstable.legacyPackages; [
             quantframe
+            protonplus
           ]);
       };
   };
