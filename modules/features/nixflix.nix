@@ -60,10 +60,10 @@
             name = "catppuccin-mocha";
           };
 
-          # nginx = {
-          #   enable = true;
-          #   addHostsEntries = true;
-          # };
+          nginx = {
+            enable = true;
+            addHostsEntries = true;
+          };
 
           recyclarr = {
             enable = true;
