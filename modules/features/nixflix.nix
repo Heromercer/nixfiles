@@ -5,7 +5,7 @@
 {
   mercer.arr = {
     nixos =
-      { config, ... }:
+      { config, inputs', ... }:
       let
         fromRepo = inputs.nixflix.lib.jellyfinPlugins.fromRepo;
       in
@@ -146,7 +146,10 @@
               };
             };
             network = {
-              localNetworkAddresses = [ "192.168.50.224" ];
+              localNetworkAddresses = [
+                "192.168.50.224"
+                "100.74.74.58"
+              ];
             };
           };
 
@@ -154,6 +157,7 @@
             enable = true;
             openFirewall = true;
             apiKey._secret = config.sops.secrets."nixflix/seerr/api_key".path;
+            package = inputs'.nixpkgs-unstable.legacyPackages.seerr;
           };
 
           prowlarr = {
