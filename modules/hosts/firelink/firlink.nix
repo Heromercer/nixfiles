@@ -32,6 +32,7 @@
           ];
           defaultGateway = "192.168.50.1";
           nameservers = [ "8.8.8.8" ];
+          extraHosts = "192.168.50.224 jellyfin.nixflix sonarr.nixflix";
         };
 
         boot = {
