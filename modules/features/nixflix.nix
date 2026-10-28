@@ -49,7 +49,7 @@
 
         imports = [ inputs.nixflix.nixosModules.default ];
 
-        netoworing.extraHosts = "192.168.50.224 jellyfin.nixflix sonarr.nixflix";
+        networking.extraHosts = "192.168.50.224 jellyfin.nixflix sonarr.nixflix";
 
         nixflix = {
           enable = true;
