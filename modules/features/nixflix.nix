@@ -60,11 +60,6 @@
             name = "catppuccin-mocha";
           };
 
-          nginx = {
-            enable = true;
-            addHostsEntries = true;
-          };
-
           recyclarr = {
             enable = true;
           };
@@ -81,7 +76,6 @@
               hostConfig.password._secret = config.sops.secrets."nixflix/sonarr/password".path;
               hostConfig.username._secret = config.sops.secrets."nixflix/sonarr/username".path;
               hostConfig.bindAddress = "192.168.50.224";
-              # hostConfig.bindAddress = "192.168.50.2";
             };
           };
 
@@ -93,7 +87,6 @@
               hostConfig.password._secret = config.sops.secrets."nixflix/sonarr_anime/password".path;
               hostConfig.username._secret = config.sops.secrets."nixflix/sonarr_anime/username".path;
               hostConfig.bindAddress = "192.168.50.224";
-              # hostConfig.bindAddress = "192.168.50.2";
             };
           };
 
@@ -105,7 +98,6 @@
               hostConfig.password._secret = config.sops.secrets."nixflix/radarr/password".path;
               hostConfig.username._secret = config.sops.secrets."nixflix/radarr/username".path;
               hostConfig.bindAddress = "192.168.50.224";
-              # hostConfig.bindAddress = "192.168.50.2";
             };
           };
 
@@ -117,7 +109,6 @@
               hostConfig.password._secret = config.sops.secrets."nixflix/lidarr/password".path;
               hostConfig.username._secret = config.sops.secrets."nixflix/lidarr/username".path;
               hostConfig.bindAddress = "192.168.50.224";
-              # hostConfig.bindAddress = "192.168.50.2";
             };
           };
 
@@ -168,7 +159,6 @@
               hostConfig.password._secret = config.sops.secrets."nixflix/prowlarr/password".path;
               hostConfig.username._secret = config.sops.secrets."nixflix/prowlarr/username".path;
               hostConfig.bindAddress = "192.168.50.224";
-              # hostConfig.bindAddress = "192.168.50.2";
               indexers = [
                 # {
                 #   name = "DrunkenSlug";
