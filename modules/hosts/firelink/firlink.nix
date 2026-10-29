@@ -11,7 +11,6 @@
       {
         includes = with mercer; [
           desktop
-          # dms
           kitty
           niri
           noctalia
