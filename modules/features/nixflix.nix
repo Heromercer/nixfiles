@@ -8,6 +8,7 @@
       { config, inputs', ... }:
       let
         fromRepo = inputs.nixflix.lib.jellyfinPlugins.fromRepo;
+        towerAddress = "192.168.0.4";
       in
       {
         sops.secrets =
@@ -75,7 +76,7 @@
               apiKey._secret = config.sops.secrets."nixflix/sonarr/api_key".path;
               hostConfig.password._secret = config.sops.secrets."nixflix/sonarr/password".path;
               hostConfig.username._secret = config.sops.secrets."nixflix/sonarr/username".path;
-              hostConfig.bindAddress = "192.168.50.224";
+              hostConfig.bindAddress = towerAddress;
             };
           };
 
@@ -86,7 +87,7 @@
               apiKey._secret = config.sops.secrets."nixflix/sonarr_anime/api_key".path;
               hostConfig.password._secret = config.sops.secrets."nixflix/sonarr_anime/password".path;
               hostConfig.username._secret = config.sops.secrets."nixflix/sonarr_anime/username".path;
-              hostConfig.bindAddress = "192.168.50.224";
+              hostConfig.bindAddress = towerAddress;
             };
           };
 
@@ -97,7 +98,7 @@
               apiKey._secret = config.sops.secrets."nixflix/radarr/api_key".path;
               hostConfig.password._secret = config.sops.secrets."nixflix/radarr/password".path;
               hostConfig.username._secret = config.sops.secrets."nixflix/radarr/username".path;
-              hostConfig.bindAddress = "192.168.50.224";
+              hostConfig.bindAddress = towerAddress;
             };
           };
 
@@ -108,7 +109,7 @@
               apiKey._secret = config.sops.secrets."nixflix/lidarr/api_key".path;
               hostConfig.password._secret = config.sops.secrets."nixflix/lidarr/password".path;
               hostConfig.username._secret = config.sops.secrets."nixflix/lidarr/username".path;
-              hostConfig.bindAddress = "192.168.50.224";
+              hostConfig.bindAddress = towerAddress;
             };
           };
 
@@ -138,7 +139,7 @@
             };
             network = {
               localNetworkAddresses = [
-                "192.168.50.224"
+                "192.168.0.4"
                 "100.74.74.58"
               ];
             };
@@ -158,7 +159,7 @@
               apiKey._secret = config.sops.secrets."nixflix/prowlarr/api_key".path;
               hostConfig.password._secret = config.sops.secrets."nixflix/prowlarr/password".path;
               hostConfig.username._secret = config.sops.secrets."nixflix/prowlarr/username".path;
-              hostConfig.bindAddress = "192.168.50.224";
+              hostConfig.bindAddress = towerAddress;
               indexers = [
                 # {
                 #   name = "DrunkenSlug";
