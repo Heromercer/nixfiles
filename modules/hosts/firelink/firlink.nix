@@ -23,12 +23,12 @@
       {
         networking = {
           hostId = "6ec5787a";
-          interfaces.enp8s0.ipv4.addresses = [
-            {
-              address = "192.168.50.2";
-              prefixLength = 24;
-            }
-          ];
+          # interfaces.enp8s0.ipv4.addresses = [
+          #   {
+          #     address = "192.168.50.2";
+          #     prefixLength = 24;
+          #   }
+          # ];
           defaultGateway = "192.168.50.1";
           nameservers = [ "8.8.8.8" ];
         };
