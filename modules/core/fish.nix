@@ -6,6 +6,7 @@
   den.schema.user.includes = [ mercer.fish ];
 
   mercer.fish = {
+    includes = [ mercer.bat ];
     homeManager =
       { pkgs, ... }:
       {
@@ -23,13 +24,6 @@
             check = "sudo nix flake check --no-build";
             nf = "cd .nixfiles && nvim";
             rebuild-tower = "nixos-rebuild switch --flake .#tower --target-host alec@192.168.0.4 --sudo --ask-sudo-password";
-          };
-        };
-
-        programs.bat = {
-          enable = true;
-          config = {
-            theme = "Catppuccin Macchiato";
           };
         };
 
