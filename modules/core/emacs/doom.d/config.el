@@ -112,6 +112,18 @@
 
 (add-hook 'org-agenda-mode-hook 'org-agenda-open-hook)
 
+(after! vertico-posframe
+  (setq vertico-posframe-poshandler #'posframe-poshandler-frame-top-center
+        vertico-posframe-width 80
+        vertico-posframe-border-width 2
+        vertico-posframe-parameters '((left-fringe . 8)
+                                      (right-fringe . 8))))
+
+(add-hook 'doom-first-input-hook #'vertico-posframe-mode)
+
+(custom-set-faces!
+  '(vertico-posframe-border :background "#b4befe"))
+
 (setq display-line-numbers-type t)
 
 

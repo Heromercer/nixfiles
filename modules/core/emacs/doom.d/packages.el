@@ -10,3 +10,5 @@
 (package! olivetti)
 
 (package! speed-type)
+
+(package! vertico-posframe)
