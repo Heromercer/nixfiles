@@ -14,7 +14,10 @@
           plugins = {
             chmod = pkgs.yaziPlugins.chmod;
             compress = pkgs.yaziPlugins.compress;
-            full-border = pkgs.yaziPlugins.full-border;
+            full-border = {
+              package = pkgs.yaziPlugins.full-border;
+              setup = true;
+            };
           };
           enableFishIntegration = true;
           settings.mgr = {
