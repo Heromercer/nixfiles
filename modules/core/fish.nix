@@ -24,6 +24,10 @@
             check = "sudo nix flake check --no-build";
             nf = "cd .nixfiles && nvim";
             rebuild-tower = "nixos-rebuild switch --flake .#tower --target-host alec@192.168.0.4 --sudo --ask-sudo-password";
+            man = "batman";
+            grep = "batgrep";
+            watch = "batwatch";
+            diff = "batdiff";
           };
         };
 
