@@ -113,8 +113,8 @@
 (add-hook 'org-agenda-mode-hook 'org-agenda-open-hook)
 
 (after! vertico-posframe
-  (setq vertico-posframe-poshandler #'posframe-poshandler-frame-top-center
-        vertico-posframe-width 80
+  (setq vertico-posframe-poshandler #'posframe-poshandler-frame-center
+        vertico-posframe-width 100
         vertico-posframe-border-width 2
         vertico-posframe-parameters '((left-fringe . 8)
                                       (right-fringe . 8))))
