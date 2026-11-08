@@ -12,3 +12,5 @@
 (package! speed-type)
 
 (package! vertico-posframe)
+
+(package! stripspace)

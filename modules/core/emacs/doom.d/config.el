@@ -112,9 +112,16 @@
 
 (add-hook 'org-agenda-mode-hook 'org-agenda-open-hook)
 
+(after! stripspace
+  (setq stripspace-only-if-initially-clean nil
+        stripspace-restore-column t))
+
+(add-hook! '(prog-mode-hook text-mode-hook conf-mode-hook)
+           #'stripspace-local-mode)
+
 (after! vertico-posframe
   (setq vertico-posframe-poshandler #'posframe-poshandler-frame-center
-        vertico-posframe-width 100
+        vertico-posframe-width 120
         vertico-posframe-border-width 2
         vertico-posframe-parameters '((left-fringe . 8)
                                       (right-fringe . 8))))

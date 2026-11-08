@@ -7,6 +7,7 @@
 - [[#org-mode][Org Mode]]
   - [[#org-roam][Org Roam]]
   - [[#org-agenda][Org Agenda]]
+- [[#stripspace][Stripspace]]
 - [[#vertico-postframe][Vertico-Postframe]]
 - [[#other-stuff][Other Stuff]]
 
@@ -142,11 +143,21 @@
 (add-hook 'org-agenda-mode-hook 'org-agenda-open-hook)
 #+end_src
 
+* Stripspace
+#+begin_src emacs-lisp
+(after! stripspace
+  (setq stripspace-only-if-initially-clean nil
+        stripspace-restore-column t))
+
+(add-hook! '(prog-mode-hook text-mode-hook conf-mode-hook)
+           #'stripspace-local-mode)
+#+end_src
+
 * Vertico-Postframe
 #+begin_src emacs-lisp
 (after! vertico-posframe
   (setq vertico-posframe-poshandler #'posframe-poshandler-frame-center
-        vertico-posframe-width 100
+        vertico-posframe-width 120
         vertico-posframe-border-width 2
         vertico-posframe-parameters '((left-fringe . 8)
                                       (right-fringe . 8))))
