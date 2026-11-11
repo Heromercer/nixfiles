@@ -69,6 +69,7 @@
     {
       matches = [
         { title = "Steam"; }
+        { title = "Warframe"; }
       ];
       open-maximized = true;
       open-on-output = "DP-1";
