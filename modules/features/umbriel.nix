@@ -19,6 +19,7 @@
             "Mod+K" = "window-focus-down";
             "Mod+F" = "window-toggle-maximize";
             "Mod+Shift+F" = "window-toggle-fullscreen";
+            "Mod+X" = "spawn noctalia msg panel-toggle session";
           };
 
           input = {
