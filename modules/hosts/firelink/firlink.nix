@@ -12,9 +12,9 @@
         includes = with mercer; [
           desktop
           kitty
-          niri
           noctalia
           rmpc
+          umbriel
         ];
       };
 
