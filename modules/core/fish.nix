@@ -22,6 +22,7 @@
             nhsu = "nh os switch -u";
             nhc = "nh clean all --keep 10 --ask";
             check = "sudo nix flake check --no-build";
+            nht = "sudo nixos-rebuild test --flake /home/alec/.nixfiles";
             nf = "cd .nixfiles && nvim";
             rebuild-tower = "nixos-rebuild switch --flake .#tower --target-host alec@192.168.0.4 --sudo --ask-sudo-password";
             man = "batman";
