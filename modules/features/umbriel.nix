@@ -2,7 +2,9 @@
 {
   mercer.umbriel = {
     homeManager = {
-      imports = [ inputs.umbriel.homeModules.default ];
+      imports = [
+        inputs.umbriel.homeModules.default
+      ];
 
       programs.umbriel = {
         enable = true;
@@ -10,16 +12,19 @@
           general.autostart = [ "noctalia" ];
           keybinds = {
             "Mod+Return" = "spawn kitty -e fish -c 'fastfetch; exec fish'";
+            "Mod+E" = "spawn kitty -e fish -c 'y; exec fish'";
             "Mod+D" = "spawn noctalia msg panel-toggle launcher";
             "Mod+B" = "spawn vivaldi";
             "Mod+Q" = "window-close";
+            "Mod+F" = "window-toggle-maximize";
+            "Mod+Shift+F" = "window-toggle-fullscreen";
+            "Mod+X" = "spawn noctalia msg panel-toggle session";
+            "Mod+Shift+W" = "spawn noctalia msg panel-toggle wallpaper";
+
             "Mod+H" = "window-focus-left";
             "Mod+L" = "window-focus-right";
             "Mod+J" = "window-focus-up";
             "Mod+K" = "window-focus-down";
-            "Mod+F" = "window-toggle-maximize";
-            "Mod+Shift+F" = "window-toggle-fullscreen";
-            "Mod+X" = "spawn noctalia msg panel-toggle session";
           };
 
           input = {
@@ -50,6 +55,10 @@
     };
 
     nixos = {
+      imports = [ inputs.umbriel.nixosModules.default ];
+
+      programs.umbriel.enable = true;
+
       nix.settings = {
         extra-substituters = [ "https://umbriel.cachix.org" ];
         extra-trusted-public-keys = [
