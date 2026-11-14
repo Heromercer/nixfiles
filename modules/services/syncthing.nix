@@ -20,7 +20,8 @@
           gui.user = "alec";
           devices = {
             firelink.id = "UDVX4FQ-2VEM3IP-SLVKSWL-AXKBFHI-WFLR2SR-IJ7ZC4R-3A2W3XX-LMRNHQN";
-            # phone.id = "KD5AMPB-XV4DR2L-K26YKNU-FBTKDAY-XJDULAV-JTC5ODG-IWXZ67L-IENUDAR";
+            phone.id = "KD5AMPB-XV4DR2L-K26YKNU-FBTKDAY-XJDULAV-JTC5ODG-IWXZ67L-IENUDAR";
+            tower.id = "UQ2WC3R-KEABIBQ-N7ISIZJ-QVHQBCL-SCKWHWV-DREIVAY-SKEDPIN-GCMDEAT";
           };
           folders.org = {
             path = "/home/alec/Documents/org";
