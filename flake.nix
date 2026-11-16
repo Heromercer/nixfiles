@@ -82,6 +82,15 @@
       url = "github:Muddyblack/nixdatifier";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+
+    preservation = {
+      url = "github:nix-community/preservation";
+    };
+
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
