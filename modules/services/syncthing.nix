@@ -26,7 +26,6 @@
           folders.org = {
             path = "/home/alec/Documents/org";
             devices = [
-              "firelink"
             ];
             versioning = {
               type = "staggered";
