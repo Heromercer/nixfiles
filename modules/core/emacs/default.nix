@@ -39,7 +39,8 @@
           # package for grammar
           languagetool
 
-          # package for yaml lsp
+          # lsps
+          nil
           yaml-language-server
         ];
       };

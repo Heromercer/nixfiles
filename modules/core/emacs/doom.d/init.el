@@ -54,7 +54,7 @@
             (yaml +lsp +tree-sitter)
 
             :tools
-            (lsp +eglot)
+            lsp
             lookup
             magit
             pdf
