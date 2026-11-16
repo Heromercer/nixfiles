@@ -6,7 +6,10 @@
   den.schema.user.includes = [ mercer.fish ];
 
   mercer.fish = {
-    includes = [ mercer.bat ];
+    includes = [
+      mercer.bat
+      mercer.eza
+    ];
     homeManager =
       { pkgs, ... }:
       {
@@ -29,6 +32,7 @@
             grep = "batgrep";
             watch = "batwatch";
             diff = "batdiff";
+            ls = "eza";
           };
         };
 
