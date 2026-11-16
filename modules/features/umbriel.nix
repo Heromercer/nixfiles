@@ -23,11 +23,14 @@
             "Mod+X" = "spawn noctalia msg panel-toggle session";
             "Mod+Shift+W" = "spawn noctalia msg panel-toggle wallpaper";
             "Mod+O" = "overview-toggle";
+            "Ctrl+Shift+Home" = "spawn noctalia msg screenshot-region";
 
             "Mod+H" = "window-focus-left";
             "Mod+L" = "window-focus-right";
             "Mod+J" = "window-focus-up";
             "Mod+K" = "window-focus-down";
+            "Mod+U" = "window-focus-or-workspace-up";
+            "Mod+I" = "window-focus-or-workspace-down";
 
             "Mod+Shift+H" = "output-focus-left";
             "Mod+Shift+L" = "output-focus-right";
@@ -86,7 +89,7 @@
 
           input = {
             focus = {
-              follows_mouse = true;
+              follows_mouse = "always";
               follows_mouse_max_scroll = 0.0;
               hover_raises = true;
             };
