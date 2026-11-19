@@ -155,6 +155,11 @@
                 "^Steam Settings$"
               ];
               default_floating = true;
+              default_maximize = false;
+              default_floating_size_px = {
+                "width" = 850;
+                "height" = 722;
+              };
             }
           ];
         };
