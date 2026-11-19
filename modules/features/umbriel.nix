@@ -104,16 +104,30 @@
             DP-1 = {
               mode = "2560x1440@144";
               scale = 1;
+              workspaces = "dynamic";
             };
             DP-3 = {
               mode = "2560x1440@144";
               scale = 1;
+              workspaces = "dynamic";
+            };
+            HDMI-A-2 = {
+              mode = "3840x2160@60";
+              scale = 2;
             };
           };
 
           layout = {
             gap = 15;
           };
+
+          # workspace = [
+          #   {
+          #     name = "CHAT";
+          #     layout.mode = "dwindle";
+          #     output = "DP-3";
+          #   }
+          # ];
 
           window_rule = [
             {
