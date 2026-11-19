@@ -186,6 +186,7 @@
 
             settings = {
               misc = {
+                host = "192.168.0.4";
                 api_key._secret = config.sops.secrets."nixflix/sabnzbd/api_key".path;
                 nzb_key._secret = config.sops.secrets."nixflix/sabnzbd/nzb_key".path;
                 username._secret = config.sops.secrets."nixflix/sabnzbd/username".path;
