@@ -50,6 +50,7 @@
             "nixflix/prowlarr/indexer_api_keys/NZBFinder" = { inherit sopsFile; };
             "nixflix/prowlarr/indexer_api_keys/NzbPlanet" = { inherit sopsFile; };
             "nixflix/prowlarr/indexer_api_keys/NZBgeek" = { inherit sopsFile; };
+            "nixflix/prowlarr/indexer_api_keys/altHUB" = { inherit sopsFile; };
           };
 
         imports = [ inputs.nixflix.nixosModules.default ];
@@ -182,6 +183,10 @@
                 {
                   name = "NZBgeek";
                   apiKey._secret = config.sops.secrets."nixflix/prowlarr/indexer_api_keys/NZBgeek".path;
+                }
+                {
+                  name = "altHUB";
+                  apiKey._secret = config.sops.secrets."nixflix/prowlarr/indexer_api_keys/altHUB".path;
                 }
               ];
             };
