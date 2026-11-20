@@ -5,7 +5,12 @@
 {
   mercer.arr = {
     nixos =
-      { config, inputs', ... }:
+      {
+        config,
+        inputs',
+        lib,
+        ...
+      }:
       let
         fromRepo = inputs.nixflix.lib.jellyfinPlugins.fromRepo;
       in
@@ -48,6 +53,8 @@
           };
 
         imports = [ inputs.nixflix.nixosModules.default ];
+
+        systemd.services.seerr.environment.HOST = lib.mkForce "0.0.0.0";
 
         nixflix = {
           enable = true;
